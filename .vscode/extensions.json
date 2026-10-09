@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-azuretools.vscode-azurecli",
+    "ms-azuretools.vscode-bicep"
+  ]
+}

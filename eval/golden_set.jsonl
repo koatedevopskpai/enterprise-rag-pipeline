@@ -1,0 +1,16 @@
+{"query": "Which items are not eligible for a refund?", "expected_source": "refund_policy"}
+{"query": "When is a partial refund granted?", "expected_source": "refund_policy"}
+{"query": "What is the daily limit for meals?", "expected_source": "expense_policy"}
+{"query": "Which expenses are not reimbursable?", "expected_source": "expense_policy"}
+{"query": "Who approves a purchase of 20,000 USD?", "expected_source": "procurement"}
+{"query": "What are the approval thresholds for spending?", "expected_source": "procurement"}
+{"query": "What is the response time for a Sev 1 incident?", "expected_source": "support_sla"}
+{"query": "What is a Sev 3 incident?", "expected_source": "support_sla"}
+{"query": "When is business class travel permitted?", "expected_source": "travel_policy"}
+{"query": "How long is the retention period for financial records?", "expected_source": "data_retention"}
+{"query": "How often is access to Restricted systems reviewed?", "expected_source": "security_policy"}
+{"query": "What must a new employee set up during their first week?", "expected_source": "onboarding"}
+{"query": "How many days of annual leave can be carried over?", "expected_source": "leave_policy"}
+{"query": "How many days per week can an employee work remotely?", "expected_source": "remote_work_policy"}
+{"query": "Within how long must a suspected security incident be reported?", "expected_source": "it_security_guidelines"}
+{"query": "If a Sev 1 incident is not acknowledged, what happens and when is the review due?", "expected_source": "support_sla"}

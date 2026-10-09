@@ -1,0 +1,6 @@
+name: enterprise-rag-pipeline
+metadata:
+  template: enterprise-rag-pipeline@0.1.0
+infra:
+  provider: bicep
+  path: infra

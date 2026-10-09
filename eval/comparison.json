@@ -1,0 +1,873 @@
+{
+  "summary": {
+    "vector": {
+      "hit_rate": 0.95,
+      "mrr": 0.95,
+      "relevance": null,
+      "groundedness": null,
+      "n": 20
+    },
+    "hybrid": {
+      "hit_rate": 0.95,
+      "mrr": 0.95,
+      "relevance": null,
+      "groundedness": null,
+      "n": 20
+    },
+    "hybrid_rerank": {
+      "hit_rate": 0.95,
+      "mrr": 0.95,
+      "relevance": null,
+      "groundedness": null,
+      "n": 20
+    }
+  },
+  "details": {
+    "vector": [
+      {
+        "query": "Which policy has reference code REF-X2TJC9?",
+        "expected_source": "gen_046",
+        "rank": 1,
+        "sources": [
+          "gen_046-p01-c00",
+          "gen_040-p01-c00",
+          "gen_007-p01-c00",
+          "gen_012-p01-c00",
+          "gen_066-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-YLH7DP?",
+        "expected_source": "gen_010",
+        "rank": 1,
+        "sources": [
+          "gen_010-p01-c00",
+          "gen_007-p01-c00",
+          "gen_071-p01-c00",
+          "gen_024-p01-c00",
+          "gen_031-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-V97X4U?",
+        "expected_source": "gen_006",
+        "rank": 1,
+        "sources": [
+          "gen_006-p01-c00",
+          "gen_023-p01-c00",
+          "gen_007-p01-c00",
+          "gen_019-p01-c00",
+          "gen_066-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-UKRT38?",
+        "expected_source": "gen_074",
+        "rank": 1,
+        "sources": [
+          "gen_074-p01-c00",
+          "gen_059-p01-c00",
+          "gen_058-p01-c00",
+          "gen_053-p01-c00",
+          "gen_007-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-VHKZKS?",
+        "expected_source": "gen_038",
+        "rank": 1,
+        "sources": [
+          "gen_038-p01-c00",
+          "gen_019-p01-c00",
+          "gen_007-p01-c00",
+          "gen_054-p01-c00",
+          "gen_066-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-UVSS1R?",
+        "expected_source": "gen_077",
+        "rank": 1,
+        "sources": [
+          "gen_077-p01-c00",
+          "gen_066-p01-c00",
+          "gen_030-p01-c00",
+          "gen_006-p01-c00",
+          "gen_057-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-BCJZG0?",
+        "expected_source": "gen_060",
+        "rank": 1,
+        "sources": [
+          "gen_060-p01-c00",
+          "gen_007-p01-c00",
+          "gen_059-p01-c00",
+          "gen_049-p01-c00",
+          "gen_023-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-9U555H?",
+        "expected_source": "gen_066",
+        "rank": 1,
+        "sources": [
+          "gen_066-p01-c00",
+          "gen_059-p01-c00",
+          "gen_056-p01-c00",
+          "gen_030-p01-c00",
+          "gen_015-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-S6L9BP?",
+        "expected_source": "gen_020",
+        "rank": 1,
+        "sources": [
+          "gen_020-p01-c00",
+          "gen_007-p01-c00",
+          "gen_066-p01-c00",
+          "gen_065-p01-c00",
+          "gen_059-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-3B1PFD?",
+        "expected_source": "gen_075",
+        "rank": 1,
+        "sources": [
+          "gen_075-p01-c00",
+          "gen_059-p01-c00",
+          "gen_068-p01-c00",
+          "gen_002-p01-c00",
+          "gen_049-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-EDV4U0?",
+        "expected_source": "gen_009",
+        "rank": 1,
+        "sources": [
+          "gen_009-p01-c00",
+          "gen_059-p01-c00",
+          "gen_066-p01-c00",
+          "gen_057-p01-c00",
+          "gen_007-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-0KSYZ6?",
+        "expected_source": "gen_018",
+        "rank": 1,
+        "sources": [
+          "gen_018-p01-c00",
+          "gen_007-p01-c00",
+          "gen_058-p01-c00",
+          "gen_068-p01-c00",
+          "gen_056-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-3718VP?",
+        "expected_source": "gen_050",
+        "rank": 1,
+        "sources": [
+          "gen_050-p01-c00",
+          "gen_007-p01-c00",
+          "gen_059-p01-c00",
+          "gen_019-p01-c00",
+          "gen_023-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-TJ3T2Y?",
+        "expected_source": "gen_012",
+        "rank": null,
+        "sources": [
+          "gen_007-p01-c00",
+          "gen_046-p01-c00",
+          "gen_059-p01-c00",
+          "gen_066-p01-c00",
+          "gen_073-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-J1YDJA?",
+        "expected_source": "gen_051",
+        "rank": 1,
+        "sources": [
+          "gen_051-p01-c00",
+          "gen_043-p01-c00",
+          "gen_003-p01-c00",
+          "gen_076-p01-c00",
+          "gen_031-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-G17LQL?",
+        "expected_source": "gen_039",
+        "rank": 1,
+        "sources": [
+          "gen_039-p01-c00",
+          "gen_007-p01-c00",
+          "gen_029-p01-c00",
+          "gen_011-p01-c00",
+          "gen_059-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-H14WER?",
+        "expected_source": "gen_037",
+        "rank": 1,
+        "sources": [
+          "gen_037-p01-c00",
+          "gen_033-p01-c00",
+          "gen_008-p01-c00",
+          "gen_066-p01-c00",
+          "gen_026-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-RNTCG8?",
+        "expected_source": "gen_034",
+        "rank": 1,
+        "sources": [
+          "gen_034-p01-c00",
+          "gen_049-p01-c00",
+          "gen_059-p01-c00",
+          "gen_015-p01-c00",
+          "gen_007-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-AX0F6T?",
+        "expected_source": "gen_055",
+        "rank": 1,
+        "sources": [
+          "gen_055-p01-c00",
+          "gen_007-p01-c00",
+          "gen_056-p01-c00",
+          "gen_059-p01-c00",
+          "gen_040-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-8AFSFK?",
+        "expected_source": "gen_056",
+        "rank": 1,
+        "sources": [
+          "gen_056-p01-c00",
+          "gen_015-p01-c00",
+          "gen_059-p01-c00",
+          "gen_066-p01-c00",
+          "gen_019-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      }
+    ],
+    "hybrid": [
+      {
+        "query": "Which policy has reference code REF-X2TJC9?",
+        "expected_source": "gen_046",
+        "rank": 1,
+        "sources": [
+          "gen_046-p01-c00",
+          "gen_007-p01-c00",
+          "gen_012-p01-c00",
+          "gen_008-p01-c00",
+          "gen_022-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-YLH7DP?",
+        "expected_source": "gen_010",
+        "rank": 1,
+        "sources": [
+          "gen_010-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00",
+          "gen_012-p01-c00",
+          "gen_024-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-V97X4U?",
+        "expected_source": "gen_006",
+        "rank": 1,
+        "sources": [
+          "gen_006-p01-c00",
+          "gen_007-p01-c00",
+          "gen_019-p01-c00",
+          "gen_023-p01-c00",
+          "gen_008-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-UKRT38?",
+        "expected_source": "gen_074",
+        "rank": 1,
+        "sources": [
+          "gen_074-p01-c00",
+          "gen_007-p01-c00",
+          "gen_000-p01-c00",
+          "gen_023-p01-c00",
+          "gen_011-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-VHKZKS?",
+        "expected_source": "gen_038",
+        "rank": 1,
+        "sources": [
+          "gen_038-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_006-p01-c00",
+          "gen_003-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-UVSS1R?",
+        "expected_source": "gen_077",
+        "rank": 1,
+        "sources": [
+          "gen_077-p01-c00",
+          "gen_006-p01-c00",
+          "gen_007-p01-c00",
+          "gen_009-p01-c00",
+          "gen_019-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-BCJZG0?",
+        "expected_source": "gen_060",
+        "rank": 1,
+        "sources": [
+          "gen_060-p01-c00",
+          "gen_007-p01-c00",
+          "gen_018-p01-c00",
+          "gen_023-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-9U555H?",
+        "expected_source": "gen_066",
+        "rank": 1,
+        "sources": [
+          "gen_066-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00",
+          "gen_015-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-S6L9BP?",
+        "expected_source": "gen_020",
+        "rank": 1,
+        "sources": [
+          "gen_020-p01-c00",
+          "gen_007-p01-c00",
+          "gen_021-p01-c00",
+          "gen_018-p01-c00",
+          "gen_036-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-3B1PFD?",
+        "expected_source": "gen_075",
+        "rank": 1,
+        "sources": [
+          "gen_075-p01-c00",
+          "gen_002-p01-c00",
+          "gen_007-p01-c00",
+          "gen_015-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-EDV4U0?",
+        "expected_source": "gen_009",
+        "rank": 1,
+        "sources": [
+          "gen_009-p01-c00",
+          "gen_007-p01-c00",
+          "gen_000-p01-c00",
+          "gen_006-p01-c00",
+          "gen_002-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-0KSYZ6?",
+        "expected_source": "gen_018",
+        "rank": 1,
+        "sources": [
+          "gen_018-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_019-p01-c00",
+          "gen_028-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-3718VP?",
+        "expected_source": "gen_050",
+        "rank": 1,
+        "sources": [
+          "gen_050-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00",
+          "gen_019-p01-c00",
+          "gen_015-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-TJ3T2Y?",
+        "expected_source": "gen_012",
+        "rank": null,
+        "sources": [
+          "gen_007-p01-c00",
+          "gen_003-p01-c00",
+          "gen_002-p01-c00",
+          "gen_023-p01-c00",
+          "gen_022-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-J1YDJA?",
+        "expected_source": "gen_051",
+        "rank": 1,
+        "sources": [
+          "gen_051-p01-c00",
+          "gen_003-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-G17LQL?",
+        "expected_source": "gen_039",
+        "rank": 1,
+        "sources": [
+          "gen_039-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_011-p01-c00",
+          "gen_023-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-H14WER?",
+        "expected_source": "gen_037",
+        "rank": 1,
+        "sources": [
+          "gen_037-p01-c00",
+          "gen_008-p01-c00",
+          "gen_005-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-RNTCG8?",
+        "expected_source": "gen_034",
+        "rank": 1,
+        "sources": [
+          "gen_034-p01-c00",
+          "gen_007-p01-c00",
+          "gen_011-p01-c00",
+          "gen_015-p01-c00",
+          "gen_023-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-AX0F6T?",
+        "expected_source": "gen_055",
+        "rank": 1,
+        "sources": [
+          "gen_055-p01-c00",
+          "gen_007-p01-c00",
+          "gen_012-p01-c00",
+          "gen_018-p01-c00",
+          "gen_019-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-8AFSFK?",
+        "expected_source": "gen_056",
+        "rank": 1,
+        "sources": [
+          "gen_056-p01-c00",
+          "gen_007-p01-c00",
+          "gen_015-p01-c00",
+          "gen_019-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      }
+    ],
+    "hybrid_rerank": [
+      {
+        "query": "Which policy has reference code REF-X2TJC9?",
+        "expected_source": "gen_046",
+        "rank": 1,
+        "sources": [
+          "gen_046-p01-c00",
+          "gen_007-p01-c00",
+          "gen_012-p01-c00",
+          "gen_008-p01-c00",
+          "gen_022-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-YLH7DP?",
+        "expected_source": "gen_010",
+        "rank": 1,
+        "sources": [
+          "gen_010-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00",
+          "gen_012-p01-c00",
+          "gen_024-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-V97X4U?",
+        "expected_source": "gen_006",
+        "rank": 1,
+        "sources": [
+          "gen_006-p01-c00",
+          "gen_007-p01-c00",
+          "gen_019-p01-c00",
+          "gen_023-p01-c00",
+          "gen_008-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-UKRT38?",
+        "expected_source": "gen_074",
+        "rank": 1,
+        "sources": [
+          "gen_074-p01-c00",
+          "gen_007-p01-c00",
+          "gen_000-p01-c00",
+          "gen_023-p01-c00",
+          "gen_011-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-VHKZKS?",
+        "expected_source": "gen_038",
+        "rank": 1,
+        "sources": [
+          "gen_038-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_006-p01-c00",
+          "gen_003-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-UVSS1R?",
+        "expected_source": "gen_077",
+        "rank": 1,
+        "sources": [
+          "gen_077-p01-c00",
+          "gen_006-p01-c00",
+          "gen_007-p01-c00",
+          "gen_009-p01-c00",
+          "gen_019-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-BCJZG0?",
+        "expected_source": "gen_060",
+        "rank": 1,
+        "sources": [
+          "gen_060-p01-c00",
+          "gen_007-p01-c00",
+          "gen_018-p01-c00",
+          "gen_023-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-9U555H?",
+        "expected_source": "gen_066",
+        "rank": 1,
+        "sources": [
+          "gen_066-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00",
+          "gen_015-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-S6L9BP?",
+        "expected_source": "gen_020",
+        "rank": 1,
+        "sources": [
+          "gen_020-p01-c00",
+          "gen_007-p01-c00",
+          "gen_021-p01-c00",
+          "gen_018-p01-c00",
+          "gen_036-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-3B1PFD?",
+        "expected_source": "gen_075",
+        "rank": 1,
+        "sources": [
+          "gen_075-p01-c00",
+          "gen_002-p01-c00",
+          "gen_007-p01-c00",
+          "gen_015-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-EDV4U0?",
+        "expected_source": "gen_009",
+        "rank": 1,
+        "sources": [
+          "gen_009-p01-c00",
+          "gen_007-p01-c00",
+          "gen_000-p01-c00",
+          "gen_006-p01-c00",
+          "gen_002-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-0KSYZ6?",
+        "expected_source": "gen_018",
+        "rank": 1,
+        "sources": [
+          "gen_018-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_019-p01-c00",
+          "gen_028-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-3718VP?",
+        "expected_source": "gen_050",
+        "rank": 1,
+        "sources": [
+          "gen_050-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00",
+          "gen_019-p01-c00",
+          "gen_015-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-TJ3T2Y?",
+        "expected_source": "gen_012",
+        "rank": null,
+        "sources": [
+          "gen_007-p01-c00",
+          "gen_003-p01-c00",
+          "gen_002-p01-c00",
+          "gen_023-p01-c00",
+          "gen_022-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-J1YDJA?",
+        "expected_source": "gen_051",
+        "rank": 1,
+        "sources": [
+          "gen_051-p01-c00",
+          "gen_003-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-G17LQL?",
+        "expected_source": "gen_039",
+        "rank": 1,
+        "sources": [
+          "gen_039-p01-c00",
+          "gen_000-p01-c00",
+          "gen_007-p01-c00",
+          "gen_011-p01-c00",
+          "gen_023-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-H14WER?",
+        "expected_source": "gen_037",
+        "rank": 1,
+        "sources": [
+          "gen_037-p01-c00",
+          "gen_008-p01-c00",
+          "gen_005-p01-c00",
+          "gen_007-p01-c00",
+          "gen_002-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-RNTCG8?",
+        "expected_source": "gen_034",
+        "rank": 1,
+        "sources": [
+          "gen_034-p01-c00",
+          "gen_007-p01-c00",
+          "gen_011-p01-c00",
+          "gen_015-p01-c00",
+          "gen_023-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-AX0F6T?",
+        "expected_source": "gen_055",
+        "rank": 1,
+        "sources": [
+          "gen_055-p01-c00",
+          "gen_007-p01-c00",
+          "gen_012-p01-c00",
+          "gen_018-p01-c00",
+          "gen_019-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy has reference code REF-8AFSFK?",
+        "expected_source": "gen_056",
+        "rank": 1,
+        "sources": [
+          "gen_056-p01-c00",
+          "gen_007-p01-c00",
+          "gen_015-p01-c00",
+          "gen_019-p01-c00",
+          "gen_021-p01-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+eval/report.json
+eval/golden_set_large.jsonl
+data/generated/
+CHUNK0_TEST_RUN.txt
+chunk0_verify.ps1

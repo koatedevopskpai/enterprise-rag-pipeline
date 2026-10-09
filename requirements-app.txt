@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]
+azure-monitor-opentelemetry
+opentelemetry-instrumentation-fastapi

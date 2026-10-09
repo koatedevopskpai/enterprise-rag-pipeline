@@ -1,0 +1,172 @@
+{
+  "mode": "hybrid",
+  "n": 16,
+  "metrics": {
+    "relevance": 4.75,
+    "groundedness": 5.0,
+    "coherence": 4.0625,
+    "fluency": 3.0625
+  },
+  "rows": [
+    {
+      "query": "Which items are not eligible for a refund?",
+      "answer": "The following items are not eligible for a refund:\n- Digital licenses that have already been activated.\n- Custom or made-to-order hardware.\n- Services that have been fully delivered and accepted.\n- Gift cards and prepaid credits [source refund_policy > Exceptions].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 5.0,
+        "fluency": 4.0
+      }
+    },
+    {
+      "query": "When is a partial refund granted?",
+      "answer": "A partial refund may be granted when a product is returned with missing accessories or visible wear. The deduction is calculated from the resale value of the returned item [source refund_policy > Partial refunds].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "What is the daily limit for meals?",
+      "answer": "The daily limit for meals is 50 USD [source expense_policy > Limits].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "Which expenses are not reimbursable?",
+      "answer": "The following expenses are not reimbursable:\n- Alcoholic beverages unless part of an approved client dinner.\n- Personal entertainment and minibar charges.\n- Traffic fines and parking penalties. \n\n[source expense_policy > Non-reimbursable items]",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "Who approves a purchase of 20,000 USD?",
+      "answer": "A purchase of 20,000 USD requires approval from the department director according to the approval thresholds [source procurement > Approval thresholds].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "What are the approval thresholds for spending?",
+      "answer": "The approval thresholds for spending are as follows:\n- Up to 5,000 USD: team manager approval.\n- 5,001 to 50,000 USD: department director approval.\n- Above 50,000 USD: finance committee approval [source procurement > Approval thresholds].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "What is the response time for a Sev 1 incident?",
+      "answer": "The response time for a Sev 1 incident is within 15 minutes [source support_sla > Severity levels].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "What is a Sev 3 incident?",
+      "answer": "A Sev 3 incident is defined as a minor issue with a workaround. The response time for a Sev 3 incident is within 1 business day [source support_sla > Severity levels].",
+      "scores": {
+        "relevance": 4.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "When is business class travel permitted?",
+      "answer": "Business class travel requires director approval according to the travel policy [source travel_policy > Flight class].",
+      "scores": {
+        "relevance": 4.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "How long is the retention period for financial records?",
+      "answer": "The retention period for financial records is 7 years [source data_retention > Retention periods].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "How often is access to Restricted systems reviewed?",
+      "answer": "Access to Restricted systems is reviewed every quarter [source security_policy > Access reviews].",
+      "scores": {
+        "relevance": 4.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "What must a new employee set up during their first week?",
+      "answer": "During their first week, a new employee must complete the security training, meet their onboarding buddy, and set up multi-factor authentication on every account [source onboarding > Week one].",
+      "scores": {
+        "relevance": 4.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "How many days of annual leave can be carried over?",
+      "answer": "Employees may carry over up to five days of annual leave into the next calendar year [source leave_policy > Leave Policy].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "How many days per week can an employee work remotely?",
+      "answer": "Employees may work remotely up to three days per week with manager approval [source remote_work_policy > Remote Work Policy].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "Within how long must a suspected security incident be reported?",
+      "answer": "A suspected security incident must be reported to the security team within one hour [source it_security_guidelines > Incident reporting].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    },
+    {
+      "query": "If a Sev 1 incident is not acknowledged, what happens and when is the review due?",
+      "answer": "If a Sev 1 incident is not acknowledged within 15 minutes, it is automatically escalated to the on-call manager. Additionally, a post-incident review for every Sev 1 incident must be completed within 5 business days [source support_sla > Escalation, Post-incident review].",
+      "scores": {
+        "relevance": 5.0,
+        "groundedness": 5.0,
+        "coherence": 4.0,
+        "fluency": 3.0
+      }
+    }
+  ]
+}

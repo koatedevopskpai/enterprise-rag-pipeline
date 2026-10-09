@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ask a question",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "ragpipeline",
+      "args": ["ask", "What does the refund policy say about exceptions?"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Ingest documents",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "ragpipeline",
+      "args": ["ingest"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
