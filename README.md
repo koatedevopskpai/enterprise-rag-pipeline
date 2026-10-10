@@ -96,20 +96,26 @@ fluency over the golden set (`eval/quality_report.{json,md}`).
 Live deployment latency (Container Apps + Application Insights) and the KQL
 queries used are in `docs/observability.md`.
 
-### Retrieval mode comparison (the honest result)
+### Retrieval mode comparison (measured)
 
-| Corpus | vector | hybrid | hybrid_rerank |
-|---|---|---|---|
-| 16 curated docs, 16 questions | 1.00 | 1.00 | 1.00 |
-| 80 synthetic docs, code + context | 0.95 | 0.95 | 0.95 |
-| 80 synthetic docs, bare codes | 0.95 | 0.95 | 0.95 |
+Hit@5 / MRR over the final 5 candidates (rerank pool = top 20 parents), 80
+synthetic docs across four 20-query sets:
 
-*Metric: hit-rate@5, hit-rate@1, MRR and nDCG@5 over the final 5 candidates
-(rerank pool = top 20 parents). All saturated — H@1 = MRR = nDCG = H@5 because
-recovered sources were always rank 1. A fourth mode, `bm25` (keyword-only), is in
-the harness; on these lexical exact-code queries it is expected to tie. 56
-queries across three sets — an illustrative validation run, not a proof
-benchmark.*
+| Query set | bm25 | vector | hybrid | hybrid_rerank |
+|---|---|---|---|---|
+| Bare reference codes | 1.00 / 1.00 | 0.95 / 0.95 | 0.90 / 0.90 | 0.90 / 0.90 |
+| Code + context | 1.00 / 1.00 | 0.95 / 0.95 | 0.95 / 0.95 | 0.90 / 0.90 |
+| Paraphrase (limit N) | 1.00 / 1.00 | 0.90 / 0.70 | 0.95 / 0.93 | 0.90 / 0.90 |
+| Ambiguous topic | 0.40 / 0.10 | 0.35 / 0.11 | 0.40 / 0.12 | 0.40 / 0.12 |
+
+Per-query latency (p50, dev box): **bm25 ~0.6 s, vector ~1.3 s, hybrid ~1.4 s,
+hybrid_rerank ~2.4 s.**
+
+Interpretation: lexical/identifier queries are a **BM25** win; paraphrase-style
+queries are a **hybrid** win over vector (MRR 0.93 vs 0.70) for ~80 ms extra; the
+LLM **reranker** added ~1 s and no recall. Ambiguous queries defeat all four.
+Synthetic near-duplicate corpus, and small sample — an illustrative validation,
+not a proof benchmark. See the blog post for the full per-question numbers.
 
 **Finding:** on our corpora the modes tie. `text-embedding-3-large` is strong
 enough that dense retrieval already recovers the needle — even random

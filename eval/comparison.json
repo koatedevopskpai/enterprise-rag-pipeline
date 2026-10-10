@@ -1,305 +1,602 @@
 {
   "summary": {
+    "bm25": {
+      "hit_rate@5": 0.4,
+      "hit_rate@1": 0.0,
+      "mrr": 0.10083333333333333,
+      "ndcg@5": 0.1726294047961902,
+      "relevance": null,
+      "groundedness": null,
+      "n": 20
+    },
     "vector": {
-      "hit_rate": 0.95,
-      "mrr": 0.95,
+      "hit_rate@5": 0.35,
+      "hit_rate@1": 0.0,
+      "mrr": 0.10999999999999999,
+      "ndcg@5": 0.16895678384763926,
       "relevance": null,
       "groundedness": null,
       "n": 20
     },
     "hybrid": {
-      "hit_rate": 0.95,
-      "mrr": 0.95,
+      "hit_rate@5": 0.4,
+      "hit_rate@1": 0.0,
+      "mrr": 0.12249999999999998,
+      "ndcg@5": 0.1904906117513089,
       "relevance": null,
       "groundedness": null,
       "n": 20
     },
     "hybrid_rerank": {
-      "hit_rate": 0.95,
-      "mrr": 0.95,
+      "hit_rate@5": 0.4,
+      "hit_rate@1": 0.0,
+      "mrr": 0.12249999999999998,
+      "ndcg@5": 0.1904906117513089,
       "relevance": null,
       "groundedness": null,
       "n": 20
     }
   },
   "details": {
+    "bm25": [
+      {
+        "query": "Which policy about refund requires approval by the team manager?",
+        "expected_source": "gen_046",
+        "rank": null,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_001-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about support requires approval by the department director?",
+        "expected_source": "gen_010",
+        "rank": 4,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about expense requires approval by the team manager?",
+        "expected_source": "gen_006",
+        "rank": 3,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_001-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about training requires approval by the department director?",
+        "expected_source": "gen_074",
+        "rank": null,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the security officer?",
+        "expected_source": "gen_038",
+        "rank": 3,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about procurement requires approval by the security officer?",
+        "expected_source": "gen_077",
+        "rank": null,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about expense requires approval by the data steward?",
+        "expected_source": "gen_060",
+        "rank": null,
+        "sources": [
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about assets requires approval by the department director?",
+        "expected_source": "gen_066",
+        "rank": null,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about assets requires approval by the finance committee?",
+        "expected_source": "gen_020",
+        "rank": 4,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_019-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about procurement requires approval by the security officer?",
+        "expected_source": "gen_075",
+        "rank": null,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about support requires approval by the team manager?",
+        "expected_source": "gen_009",
+        "rank": 5,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_001-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the team manager?",
+        "expected_source": "gen_018",
+        "rank": null,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_001-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about training requires approval by the finance committee?",
+        "expected_source": "gen_050",
+        "rank": null,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_019-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about onboarding requires approval by the department director?",
+        "expected_source": "gen_012",
+        "rank": 5,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the finance committee?",
+        "expected_source": "gen_051",
+        "rank": null,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_019-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the data steward?",
+        "expected_source": "gen_039",
+        "rank": 5,
+        "sources": [
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about retention requires approval by the team manager?",
+        "expected_source": "gen_037",
+        "rank": null,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_001-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about refund requires approval by the data steward?",
+        "expected_source": "gen_034",
+        "rank": 4,
+        "sources": [
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about travel requires approval by the department director?",
+        "expected_source": "gen_055",
+        "rank": null,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the data steward?",
+        "expected_source": "gen_056",
+        "rank": null,
+        "sources": [
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      }
+    ],
     "vector": [
       {
-        "query": "Which policy has reference code REF-X2TJC9?",
+        "query": "Which policy about refund requires approval by the team manager?",
         "expected_source": "gen_046",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_046-p01-c00",
-          "gen_040-p01-c00",
-          "gen_007-p01-c00",
-          "gen_012-p01-c00",
-          "gen_066-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-YLH7DP?",
+        "query": "Which policy about support requires approval by the department director?",
         "expected_source": "gen_010",
-        "rank": 1,
+        "rank": 3,
         "sources": [
-          "gen_010-p01-c00",
-          "gen_007-p01-c00",
-          "gen_071-p01-c00",
-          "gen_024-p01-c00",
-          "gen_031-p01-c00"
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-V97X4U?",
+        "query": "Which policy about expense requires approval by the team manager?",
         "expected_source": "gen_006",
-        "rank": 1,
+        "rank": 2,
         "sources": [
-          "gen_006-p01-c00",
-          "gen_023-p01-c00",
-          "gen_007-p01-c00",
-          "gen_019-p01-c00",
-          "gen_066-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-UKRT38?",
+        "query": "Which policy about training requires approval by the department director?",
         "expected_source": "gen_074",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_074-p01-c00",
-          "gen_059-p01-c00",
-          "gen_058-p01-c00",
-          "gen_053-p01-c00",
-          "gen_007-p01-c00"
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-VHKZKS?",
+        "query": "Which policy about leave requires approval by the security officer?",
         "expected_source": "gen_038",
-        "rank": 1,
+        "rank": 3,
         "sources": [
-          "gen_038-p01-c00",
-          "gen_019-p01-c00",
-          "gen_007-p01-c00",
-          "gen_054-p01-c00",
-          "gen_066-p01-c00"
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-UVSS1R?",
+        "query": "Which policy about procurement requires approval by the security officer?",
         "expected_source": "gen_077",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_077-p01-c00",
-          "gen_066-p01-c00",
-          "gen_030-p01-c00",
-          "gen_006-p01-c00",
-          "gen_057-p01-c00"
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-BCJZG0?",
+        "query": "Which policy about expense requires approval by the data steward?",
         "expected_source": "gen_060",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_060-p01-c00",
-          "gen_007-p01-c00",
-          "gen_059-p01-c00",
-          "gen_049-p01-c00",
-          "gen_023-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-9U555H?",
+        "query": "Which policy about assets requires approval by the department director?",
         "expected_source": "gen_066",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_066-p01-c00",
-          "gen_059-p01-c00",
-          "gen_056-p01-c00",
-          "gen_030-p01-c00",
-          "gen_015-p01-c00"
+          "gen_002-p03-c00",
+          "gen_031-p03-c00",
+          "gen_079-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-S6L9BP?",
+        "query": "Which policy about assets requires approval by the finance committee?",
         "expected_source": "gen_020",
-        "rank": 1,
+        "rank": 3,
         "sources": [
-          "gen_020-p01-c00",
-          "gen_007-p01-c00",
-          "gen_066-p01-c00",
-          "gen_065-p01-c00",
-          "gen_059-p01-c00"
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-3B1PFD?",
+        "query": "Which policy about procurement requires approval by the security officer?",
         "expected_source": "gen_075",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_075-p01-c00",
-          "gen_059-p01-c00",
-          "gen_068-p01-c00",
-          "gen_002-p01-c00",
-          "gen_049-p01-c00"
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-EDV4U0?",
+        "query": "Which policy about support requires approval by the team manager?",
         "expected_source": "gen_009",
-        "rank": 1,
+        "rank": 4,
         "sources": [
-          "gen_009-p01-c00",
-          "gen_059-p01-c00",
-          "gen_066-p01-c00",
-          "gen_057-p01-c00",
-          "gen_007-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-0KSYZ6?",
+        "query": "Which policy about leave requires approval by the team manager?",
         "expected_source": "gen_018",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_018-p01-c00",
-          "gen_007-p01-c00",
-          "gen_058-p01-c00",
-          "gen_068-p01-c00",
-          "gen_056-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-3718VP?",
+        "query": "Which policy about training requires approval by the finance committee?",
         "expected_source": "gen_050",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_050-p01-c00",
-          "gen_007-p01-c00",
-          "gen_059-p01-c00",
-          "gen_019-p01-c00",
-          "gen_023-p01-c00"
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-TJ3T2Y?",
+        "query": "Which policy about onboarding requires approval by the department director?",
         "expected_source": "gen_012",
         "rank": null,
         "sources": [
-          "gen_007-p01-c00",
-          "gen_046-p01-c00",
-          "gen_059-p01-c00",
-          "gen_066-p01-c00",
-          "gen_073-p01-c00"
+          "gen_079-p00-c00",
+          "gen_032-p00-c00",
+          "gen_078-p00-c00",
+          "gen_062-p00-c00",
+          "gen_002-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-J1YDJA?",
+        "query": "Which policy about leave requires approval by the finance committee?",
         "expected_source": "gen_051",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_051-p01-c00",
-          "gen_043-p01-c00",
-          "gen_003-p01-c00",
-          "gen_076-p01-c00",
-          "gen_031-p01-c00"
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-G17LQL?",
+        "query": "Which policy about leave requires approval by the data steward?",
         "expected_source": "gen_039",
-        "rank": 1,
+        "rank": 5,
         "sources": [
-          "gen_039-p01-c00",
-          "gen_007-p01-c00",
-          "gen_029-p01-c00",
-          "gen_011-p01-c00",
-          "gen_059-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-H14WER?",
+        "query": "Which policy about retention requires approval by the team manager?",
         "expected_source": "gen_037",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_037-p01-c00",
-          "gen_033-p01-c00",
-          "gen_008-p01-c00",
-          "gen_066-p01-c00",
-          "gen_026-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-RNTCG8?",
+        "query": "Which policy about refund requires approval by the data steward?",
         "expected_source": "gen_034",
-        "rank": 1,
+        "rank": 4,
         "sources": [
-          "gen_034-p01-c00",
-          "gen_049-p01-c00",
-          "gen_059-p01-c00",
-          "gen_015-p01-c00",
-          "gen_007-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-AX0F6T?",
+        "query": "Which policy about travel requires approval by the department director?",
         "expected_source": "gen_055",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_055-p01-c00",
-          "gen_007-p01-c00",
-          "gen_056-p01-c00",
-          "gen_059-p01-c00",
-          "gen_040-p01-c00"
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-8AFSFK?",
+        "query": "Which policy about leave requires approval by the data steward?",
         "expected_source": "gen_056",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_056-p01-c00",
-          "gen_015-p01-c00",
-          "gen_059-p01-c00",
-          "gen_066-p01-c00",
-          "gen_019-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
@@ -307,281 +604,281 @@
     ],
     "hybrid": [
       {
-        "query": "Which policy has reference code REF-X2TJC9?",
+        "query": "Which policy about refund requires approval by the team manager?",
         "expected_source": "gen_046",
-        "rank": 1,
-        "sources": [
-          "gen_046-p01-c00",
-          "gen_007-p01-c00",
-          "gen_012-p01-c00",
-          "gen_008-p01-c00",
-          "gen_022-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-YLH7DP?",
-        "expected_source": "gen_010",
-        "rank": 1,
-        "sources": [
-          "gen_010-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00",
-          "gen_012-p01-c00",
-          "gen_024-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-V97X4U?",
-        "expected_source": "gen_006",
-        "rank": 1,
-        "sources": [
-          "gen_006-p01-c00",
-          "gen_007-p01-c00",
-          "gen_019-p01-c00",
-          "gen_023-p01-c00",
-          "gen_008-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-UKRT38?",
-        "expected_source": "gen_074",
-        "rank": 1,
-        "sources": [
-          "gen_074-p01-c00",
-          "gen_007-p01-c00",
-          "gen_000-p01-c00",
-          "gen_023-p01-c00",
-          "gen_011-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-VHKZKS?",
-        "expected_source": "gen_038",
-        "rank": 1,
-        "sources": [
-          "gen_038-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_006-p01-c00",
-          "gen_003-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-UVSS1R?",
-        "expected_source": "gen_077",
-        "rank": 1,
-        "sources": [
-          "gen_077-p01-c00",
-          "gen_006-p01-c00",
-          "gen_007-p01-c00",
-          "gen_009-p01-c00",
-          "gen_019-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-BCJZG0?",
-        "expected_source": "gen_060",
-        "rank": 1,
-        "sources": [
-          "gen_060-p01-c00",
-          "gen_007-p01-c00",
-          "gen_018-p01-c00",
-          "gen_023-p01-c00",
-          "gen_021-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-9U555H?",
-        "expected_source": "gen_066",
-        "rank": 1,
-        "sources": [
-          "gen_066-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00",
-          "gen_015-p01-c00",
-          "gen_021-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-S6L9BP?",
-        "expected_source": "gen_020",
-        "rank": 1,
-        "sources": [
-          "gen_020-p01-c00",
-          "gen_007-p01-c00",
-          "gen_021-p01-c00",
-          "gen_018-p01-c00",
-          "gen_036-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-3B1PFD?",
-        "expected_source": "gen_075",
-        "rank": 1,
-        "sources": [
-          "gen_075-p01-c00",
-          "gen_002-p01-c00",
-          "gen_007-p01-c00",
-          "gen_015-p01-c00",
-          "gen_021-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-EDV4U0?",
-        "expected_source": "gen_009",
-        "rank": 1,
-        "sources": [
-          "gen_009-p01-c00",
-          "gen_007-p01-c00",
-          "gen_000-p01-c00",
-          "gen_006-p01-c00",
-          "gen_002-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-0KSYZ6?",
-        "expected_source": "gen_018",
-        "rank": 1,
-        "sources": [
-          "gen_018-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_019-p01-c00",
-          "gen_028-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-3718VP?",
-        "expected_source": "gen_050",
-        "rank": 1,
-        "sources": [
-          "gen_050-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00",
-          "gen_019-p01-c00",
-          "gen_015-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-TJ3T2Y?",
-        "expected_source": "gen_012",
         "rank": null,
         "sources": [
-          "gen_007-p01-c00",
-          "gen_003-p01-c00",
-          "gen_002-p01-c00",
-          "gen_023-p01-c00",
-          "gen_022-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-J1YDJA?",
+        "query": "Which policy about support requires approval by the department director?",
+        "expected_source": "gen_010",
+        "rank": 3,
+        "sources": [
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about expense requires approval by the team manager?",
+        "expected_source": "gen_006",
+        "rank": 2,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about training requires approval by the department director?",
+        "expected_source": "gen_074",
+        "rank": null,
+        "sources": [
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the security officer?",
+        "expected_source": "gen_038",
+        "rank": 3,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about procurement requires approval by the security officer?",
+        "expected_source": "gen_077",
+        "rank": null,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about expense requires approval by the data steward?",
+        "expected_source": "gen_060",
+        "rank": null,
+        "sources": [
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about assets requires approval by the department director?",
+        "expected_source": "gen_066",
+        "rank": null,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_031-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about assets requires approval by the finance committee?",
+        "expected_source": "gen_020",
+        "rank": 3,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about procurement requires approval by the security officer?",
+        "expected_source": "gen_075",
+        "rank": null,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about support requires approval by the team manager?",
+        "expected_source": "gen_009",
+        "rank": 4,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the team manager?",
+        "expected_source": "gen_018",
+        "rank": null,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about training requires approval by the finance committee?",
+        "expected_source": "gen_050",
+        "rank": null,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about onboarding requires approval by the department director?",
+        "expected_source": "gen_012",
+        "rank": 4,
+        "sources": [
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the finance committee?",
         "expected_source": "gen_051",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_051-p01-c00",
-          "gen_003-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00"
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-G17LQL?",
+        "query": "Which policy about leave requires approval by the data steward?",
         "expected_source": "gen_039",
-        "rank": 1,
+        "rank": 5,
         "sources": [
-          "gen_039-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_011-p01-c00",
-          "gen_023-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-H14WER?",
+        "query": "Which policy about retention requires approval by the team manager?",
         "expected_source": "gen_037",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_037-p01-c00",
-          "gen_008-p01-c00",
-          "gen_005-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-RNTCG8?",
+        "query": "Which policy about refund requires approval by the data steward?",
         "expected_source": "gen_034",
-        "rank": 1,
+        "rank": 4,
         "sources": [
-          "gen_034-p01-c00",
-          "gen_007-p01-c00",
-          "gen_011-p01-c00",
-          "gen_015-p01-c00",
-          "gen_023-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-AX0F6T?",
+        "query": "Which policy about travel requires approval by the department director?",
         "expected_source": "gen_055",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_055-p01-c00",
-          "gen_007-p01-c00",
-          "gen_012-p01-c00",
-          "gen_018-p01-c00",
-          "gen_019-p01-c00"
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-8AFSFK?",
+        "query": "Which policy about leave requires approval by the data steward?",
         "expected_source": "gen_056",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_056-p01-c00",
-          "gen_007-p01-c00",
-          "gen_015-p01-c00",
-          "gen_019-p01-c00",
-          "gen_021-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
@@ -589,281 +886,281 @@
     ],
     "hybrid_rerank": [
       {
-        "query": "Which policy has reference code REF-X2TJC9?",
+        "query": "Which policy about refund requires approval by the team manager?",
         "expected_source": "gen_046",
-        "rank": 1,
-        "sources": [
-          "gen_046-p01-c00",
-          "gen_007-p01-c00",
-          "gen_012-p01-c00",
-          "gen_008-p01-c00",
-          "gen_022-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-YLH7DP?",
-        "expected_source": "gen_010",
-        "rank": 1,
-        "sources": [
-          "gen_010-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00",
-          "gen_012-p01-c00",
-          "gen_024-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-V97X4U?",
-        "expected_source": "gen_006",
-        "rank": 1,
-        "sources": [
-          "gen_006-p01-c00",
-          "gen_007-p01-c00",
-          "gen_019-p01-c00",
-          "gen_023-p01-c00",
-          "gen_008-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-UKRT38?",
-        "expected_source": "gen_074",
-        "rank": 1,
-        "sources": [
-          "gen_074-p01-c00",
-          "gen_007-p01-c00",
-          "gen_000-p01-c00",
-          "gen_023-p01-c00",
-          "gen_011-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-VHKZKS?",
-        "expected_source": "gen_038",
-        "rank": 1,
-        "sources": [
-          "gen_038-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_006-p01-c00",
-          "gen_003-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-UVSS1R?",
-        "expected_source": "gen_077",
-        "rank": 1,
-        "sources": [
-          "gen_077-p01-c00",
-          "gen_006-p01-c00",
-          "gen_007-p01-c00",
-          "gen_009-p01-c00",
-          "gen_019-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-BCJZG0?",
-        "expected_source": "gen_060",
-        "rank": 1,
-        "sources": [
-          "gen_060-p01-c00",
-          "gen_007-p01-c00",
-          "gen_018-p01-c00",
-          "gen_023-p01-c00",
-          "gen_021-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-9U555H?",
-        "expected_source": "gen_066",
-        "rank": 1,
-        "sources": [
-          "gen_066-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00",
-          "gen_015-p01-c00",
-          "gen_021-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-S6L9BP?",
-        "expected_source": "gen_020",
-        "rank": 1,
-        "sources": [
-          "gen_020-p01-c00",
-          "gen_007-p01-c00",
-          "gen_021-p01-c00",
-          "gen_018-p01-c00",
-          "gen_036-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-3B1PFD?",
-        "expected_source": "gen_075",
-        "rank": 1,
-        "sources": [
-          "gen_075-p01-c00",
-          "gen_002-p01-c00",
-          "gen_007-p01-c00",
-          "gen_015-p01-c00",
-          "gen_021-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-EDV4U0?",
-        "expected_source": "gen_009",
-        "rank": 1,
-        "sources": [
-          "gen_009-p01-c00",
-          "gen_007-p01-c00",
-          "gen_000-p01-c00",
-          "gen_006-p01-c00",
-          "gen_002-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-0KSYZ6?",
-        "expected_source": "gen_018",
-        "rank": 1,
-        "sources": [
-          "gen_018-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_019-p01-c00",
-          "gen_028-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-3718VP?",
-        "expected_source": "gen_050",
-        "rank": 1,
-        "sources": [
-          "gen_050-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00",
-          "gen_019-p01-c00",
-          "gen_015-p01-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy has reference code REF-TJ3T2Y?",
-        "expected_source": "gen_012",
         "rank": null,
         "sources": [
-          "gen_007-p01-c00",
-          "gen_003-p01-c00",
-          "gen_002-p01-c00",
-          "gen_023-p01-c00",
-          "gen_022-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-J1YDJA?",
+        "query": "Which policy about support requires approval by the department director?",
+        "expected_source": "gen_010",
+        "rank": 3,
+        "sources": [
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about expense requires approval by the team manager?",
+        "expected_source": "gen_006",
+        "rank": 2,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about training requires approval by the department director?",
+        "expected_source": "gen_074",
+        "rank": null,
+        "sources": [
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the security officer?",
+        "expected_source": "gen_038",
+        "rank": 3,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about procurement requires approval by the security officer?",
+        "expected_source": "gen_077",
+        "rank": null,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about expense requires approval by the data steward?",
+        "expected_source": "gen_060",
+        "rank": null,
+        "sources": [
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about assets requires approval by the department director?",
+        "expected_source": "gen_066",
+        "rank": null,
+        "sources": [
+          "gen_002-p03-c00",
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_031-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about assets requires approval by the finance committee?",
+        "expected_source": "gen_020",
+        "rank": 3,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about procurement requires approval by the security officer?",
+        "expected_source": "gen_075",
+        "rank": null,
+        "sources": [
+          "gen_011-p03-c00",
+          "gen_035-p03-c00",
+          "gen_038-p03-c00",
+          "gen_043-p03-c00",
+          "gen_045-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about support requires approval by the team manager?",
+        "expected_source": "gen_009",
+        "rank": 4,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the team manager?",
+        "expected_source": "gen_018",
+        "rank": null,
+        "sources": [
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about training requires approval by the finance committee?",
+        "expected_source": "gen_050",
+        "rank": null,
+        "sources": [
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about onboarding requires approval by the department director?",
+        "expected_source": "gen_012",
+        "rank": 4,
+        "sources": [
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which policy about leave requires approval by the finance committee?",
         "expected_source": "gen_051",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_051-p01-c00",
-          "gen_003-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00"
+          "gen_008-p03-c00",
+          "gen_014-p03-c00",
+          "gen_020-p03-c00",
+          "gen_023-p03-c00",
+          "gen_029-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-G17LQL?",
+        "query": "Which policy about leave requires approval by the data steward?",
         "expected_source": "gen_039",
-        "rank": 1,
+        "rank": 5,
         "sources": [
-          "gen_039-p01-c00",
-          "gen_000-p01-c00",
-          "gen_007-p01-c00",
-          "gen_011-p01-c00",
-          "gen_023-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-H14WER?",
+        "query": "Which policy about retention requires approval by the team manager?",
         "expected_source": "gen_037",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_037-p01-c00",
-          "gen_008-p01-c00",
-          "gen_005-p01-c00",
-          "gen_007-p01-c00",
-          "gen_002-p01-c00"
+          "gen_000-p03-c00",
+          "gen_006-p03-c00",
+          "gen_007-p03-c00",
+          "gen_009-p03-c00",
+          "gen_015-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-RNTCG8?",
+        "query": "Which policy about refund requires approval by the data steward?",
         "expected_source": "gen_034",
-        "rank": 1,
+        "rank": 4,
         "sources": [
-          "gen_034-p01-c00",
-          "gen_007-p01-c00",
-          "gen_011-p01-c00",
-          "gen_015-p01-c00",
-          "gen_023-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-AX0F6T?",
+        "query": "Which policy about travel requires approval by the department director?",
         "expected_source": "gen_055",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_055-p01-c00",
-          "gen_007-p01-c00",
-          "gen_012-p01-c00",
-          "gen_018-p01-c00",
-          "gen_019-p01-c00"
+          "gen_003-p03-c00",
+          "gen_005-p03-c00",
+          "gen_010-p03-c00",
+          "gen_012-p03-c00",
+          "gen_021-p03-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy has reference code REF-8AFSFK?",
+        "query": "Which policy about leave requires approval by the data steward?",
         "expected_source": "gen_056",
-        "rank": 1,
+        "rank": null,
         "sources": [
-          "gen_056-p01-c00",
-          "gen_007-p01-c00",
-          "gen_015-p01-c00",
-          "gen_019-p01-c00",
-          "gen_021-p01-c00"
+          "gen_004-p03-c00",
+          "gen_013-p03-c00",
+          "gen_033-p03-c00",
+          "gen_034-p03-c00",
+          "gen_039-p03-c00"
         ],
         "relevance": null,
         "groundedness": null

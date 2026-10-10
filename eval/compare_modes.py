@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import sys
 import time
@@ -86,7 +87,9 @@ def main():
 
     for mode in MODES:
         hits = []
+        hits1 = []
         rrs = []
+        ndcgs = []
         rel_scores = []
         grd_scores = []
         rows = []
@@ -99,7 +102,10 @@ def main():
 
             hit, rr, rank = hit_metrics(sources, item.get("expected_source"))
             hits.append(hit)
+            hits1.append(1.0 if rank == 1 else 0.0)
             rrs.append(rr)
+            # nDCG@5 with a single relevant doc: rank<=5 counted, IDCG = 1.
+            ndcgs.append((1.0 / math.log2(rank + 1)) if rank is not None else 0.0)
 
             rel_score = None
             grd_score = None
@@ -132,8 +138,10 @@ def main():
             )
 
         summary[mode] = {
-            "hit_rate": mean(hits),
+            "hit_rate@5": mean(hits),
+            "hit_rate@1": mean(hits1),
             "mrr": mean(rrs),
+            "ndcg@5": mean(ndcgs),
             "relevance": mean(rel_scores),
             "groundedness": mean(grd_scores),
             "n": len(rows),
@@ -143,12 +151,12 @@ def main():
     out = ROOT / "eval" / "comparison.json"
     out.write_text(json.dumps({"summary": summary, "details": details}, indent=2), encoding="utf-8")
 
-    print(f"{'mode':16}{'hit':>7}{'mrr':>7}{'relevance':>11}{'groundedness':>14}{'n':>4}")
+    print(f"{'mode':16}{'hit5':>7}{'hit1':>7}{'mrr':>7}{'ndcg':>7}{'n':>4}")
     for mode in MODES:
         stats = summary[mode]
         print(
-            f"{mode:16}{fmt(stats['hit_rate']):>7}{fmt(stats['mrr']):>7}"
-            f"{fmt(stats['relevance']):>11}{fmt(stats['groundedness']):>14}{stats['n']:>4}"
+            f"{mode:16}{fmt(stats['hit_rate@5']):>7}{fmt(stats['hit_rate@1']):>7}"
+            f"{fmt(stats['mrr']):>7}{fmt(stats['ndcg@5']):>7}{stats['n']:>4}"
         )
     print(f"\nwrote {out}")
 
