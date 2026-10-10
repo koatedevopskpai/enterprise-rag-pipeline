@@ -9,7 +9,7 @@ def _parents():
 
 
 def test_registry_exposes_modes():
-    assert set(strategies.STRATEGIES) == {"vector", "hybrid", "hybrid_rerank"}
+    assert set(strategies.STRATEGIES) == {"bm25", "vector", "hybrid", "hybrid_rerank"}
 
 
 def test_hybrid_rerank_uses_llm_order(monkeypatch):

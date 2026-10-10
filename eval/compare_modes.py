@@ -12,7 +12,7 @@ from azure.ai.evaluation import GroundednessEvaluator, RelevanceEvaluator
 from ragpipeline.strategies import STRATEGIES
 from ragpipeline.synthesize import synthesize_answer
 
-MODES = ["vector", "hybrid", "hybrid_rerank"]
+MODES = ["bm25", "vector", "hybrid", "hybrid_rerank"]
 
 
 def model_config():

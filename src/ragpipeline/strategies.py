@@ -13,6 +13,11 @@ def strategy_hybrid(query, top_k=RETRIEVE_TOP_K):
     return dedupe_by_parent(hits)[:top_k]
 
 
+def strategy_bm25(query, top_k=RETRIEVE_TOP_K):
+    hits = search_children(query, mode="bm25", top_n=top_k * 4)
+    return dedupe_by_parent(hits)[:top_k]
+
+
 def strategy_hybrid_rerank(query, top_k=RETRIEVE_TOP_K):
     hits = search_children(query, mode="hybrid", top_n=max(20, top_k * 4))
     parents = dedupe_by_parent(hits)[:20]
@@ -20,6 +25,7 @@ def strategy_hybrid_rerank(query, top_k=RETRIEVE_TOP_K):
 
 
 STRATEGIES = {
+    "bm25": strategy_bm25,
     "vector": strategy_vector,
     "hybrid": strategy_hybrid,
     "hybrid_rerank": strategy_hybrid_rerank,

@@ -69,7 +69,15 @@ def main():
         (DOCS_DIR / f"{stem}.md").write_text(
             make_doc(index, topic, ref, limit, approver), encoding="utf-8"
         )
-        records.append({"source": stem, "topic": topic, "ref": ref, "limit": limit})
+        records.append(
+            {
+                "source": stem,
+                "topic": topic,
+                "ref": ref,
+                "limit": limit,
+                "approver": approver,
+            }
+        )
 
     rng.shuffle(records)
     chosen = records[: args.queries]
@@ -91,6 +99,24 @@ def main():
                     "query": f"Which policy has reference code {record['ref']}?",
                     "expected_source": record["source"],
                     "type": "exact_code_context",
+                }
+            )
+        )
+        lines.append(
+            json.dumps(
+                {
+                    "query": f"Which policy sets a maximum permitted value of {record['limit']} units?",
+                    "expected_source": record["source"],
+                    "type": "paraphrase_limit",
+                }
+            )
+        )
+        lines.append(
+            json.dumps(
+                {
+                    "query": f"Which policy about {record['topic']} requires approval by the {record['approver']}?",
+                    "expected_source": record["source"],
+                    "type": "ambiguous_topic",
                 }
             )
         )

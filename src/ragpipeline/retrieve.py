@@ -32,23 +32,28 @@ def dedupe_by_parent(hits):
 
 
 def search_children(query, mode="hybrid", top_n=20, index_name=SEARCH_INDEX_NAME):
-    query_vector = embed([query])[0]
     client = get_search_client(index_name)
 
-    vector_query = VectorizedQuery(
-        vector=query_vector,
-        k_nearest_neighbors=top_n,
-        fields="content_vector",
-    )
+    vector_query = None
+    search_text = None
 
-    search_text = query if mode == "hybrid" else None
+    if mode in ("hybrid", "vector"):
+        query_vector = embed([query])[0]
+        vector_query = VectorizedQuery(
+            vector=query_vector,
+            k_nearest_neighbors=top_n,
+            fields="content_vector",
+        )
+    if mode in ("hybrid", "bm25"):
+        search_text = query
 
-    results = client.search(
-        search_text=search_text,
-        vector_queries=[vector_query],
-        select=SELECT_FIELDS,
-        top=top_n,
-    )
+    kwargs = {"select": SELECT_FIELDS, "top": top_n}
+    if vector_query is not None:
+        kwargs["vector_queries"] = [vector_query]
+    if search_text is not None:
+        kwargs["search_text"] = search_text
+
+    results = client.search(**kwargs)
 
     return [
         {
