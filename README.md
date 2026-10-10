@@ -104,7 +104,10 @@ queries used are in `docs/observability.md`.
 | 80 synthetic docs, code + context | 0.95 | 0.95 | 0.95 |
 | 80 synthetic docs, bare codes | 0.95 | 0.95 | 0.95 |
 
-*Metric: hit-rate@5 (fraction of queries where the expected source was retrieved).*
+*Metric: hit-rate@5 and MRR over the final 5 candidates (rerank pool = top 20
+parents). MRR equaled hit-rate in every row — recovered sources were always rank
+1 — so the metric is saturated before the reranker runs. This is an illustrative
+validation run, not a large-N proof benchmark.*
 
 **Finding:** on our corpora the modes tie. `text-embedding-3-large` is strong
 enough that dense retrieval already recovers the needle — even random
