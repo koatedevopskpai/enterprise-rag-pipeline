@@ -1,37 +1,37 @@
 {
   "summary": {
     "bm25": {
-      "hit_rate@5": 0.4,
-      "hit_rate@1": 0.0,
-      "mrr": 0.10083333333333333,
-      "ndcg@5": 0.1726294047961902,
+      "hit_rate@5": 0.1,
+      "hit_rate@1": 0.05,
+      "mrr": 0.075,
+      "ndcg@5": 0.08154648767857288,
       "relevance": null,
       "groundedness": null,
       "n": 20
     },
     "vector": {
-      "hit_rate@5": 0.35,
+      "hit_rate@5": 0.15,
       "hit_rate@1": 0.0,
-      "mrr": 0.10999999999999999,
-      "ndcg@5": 0.16895678384763926,
+      "mrr": 0.06,
+      "ndcg@5": 0.08243561571887284,
       "relevance": null,
       "groundedness": null,
       "n": 20
     },
     "hybrid": {
-      "hit_rate@5": 0.4,
+      "hit_rate@5": 0.1,
       "hit_rate@1": 0.0,
-      "mrr": 0.12249999999999998,
-      "ndcg@5": 0.1904906117513089,
+      "mrr": 0.026666666666666665,
+      "ndcg@5": 0.04434264036172708,
       "relevance": null,
       "groundedness": null,
       "n": 20
     },
     "hybrid_rerank": {
-      "hit_rate@5": 0.4,
+      "hit_rate@5": 0.1,
       "hit_rate@1": 0.0,
-      "mrr": 0.12249999999999998,
-      "ndcg@5": 0.1904906117513089,
+      "mrr": 0.026666666666666665,
+      "ndcg@5": 0.04434264036172708,
       "relevance": null,
       "groundedness": null,
       "n": 20
@@ -40,281 +40,281 @@
   "details": {
     "bm25": [
       {
-        "query": "Which policy about refund requires approval by the team manager?",
-        "expected_source": "gen_046",
+        "query": "Which submission mentions wind mound handling in the standing review?",
+        "expected_source": "crowd_034",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_001-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the department director?",
-        "expected_source": "gen_010",
-        "rank": 4,
-        "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about expense requires approval by the team manager?",
-        "expected_source": "gen_006",
-        "rank": 3,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_001-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about training requires approval by the department director?",
-        "expected_source": "gen_074",
+        "query": "Which submission mentions winter hut handling in the standing review?",
+        "expected_source": "crowd_017",
         "rank": null,
         "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the security officer?",
-        "expected_source": "gen_038",
-        "rank": 3,
-        "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_077",
+        "query": "Which submission mentions sport dart handling in the standing review?",
+        "expected_source": "crowd_033",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about expense requires approval by the data steward?",
-        "expected_source": "gen_060",
+        "query": "Which submission mentions broken fill handling in the standing review?",
+        "expected_source": "crowd_000",
+        "rank": 1,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions undertaking handling in the standing review?",
+        "expected_source": "crowd_039",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the department director?",
-        "expected_source": "gen_066",
+        "query": "Which submission mentions marker handling in the standing review?",
+        "expected_source": "crowd_037",
         "rank": null,
         "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the finance committee?",
-        "expected_source": "gen_020",
-        "rank": 4,
-        "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_019-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_075",
+        "query": "Which submission mentions sub-zero handling in the standing review?",
+        "expected_source": "crowd_032",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the team manager?",
-        "expected_source": "gen_009",
-        "rank": 5,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_001-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the team manager?",
-        "expected_source": "gen_018",
+        "query": "Which submission mentions camera hole handling in the standing review?",
+        "expected_source": "crowd_024",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_001-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about training requires approval by the finance committee?",
-        "expected_source": "gen_050",
+        "query": "Which submission mentions orchard patch handling in the standing review?",
+        "expected_source": "crowd_021",
         "rank": null,
         "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_019-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about onboarding requires approval by the department director?",
-        "expected_source": "gen_012",
-        "rank": 5,
-        "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the finance committee?",
-        "expected_source": "gen_051",
+        "query": "Which submission mentions small bird handling in the standing review?",
+        "expected_source": "crowd_038",
         "rank": null,
         "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_019-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_039",
-        "rank": 5,
-        "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about retention requires approval by the team manager?",
-        "expected_source": "gen_037",
+        "query": "Which submission mentions storage jar handling in the standing review?",
+        "expected_source": "crowd_008",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_001-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about refund requires approval by the data steward?",
-        "expected_source": "gen_034",
-        "rank": 4,
-        "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about travel requires approval by the department director?",
-        "expected_source": "gen_055",
+        "query": "Which submission mentions cargo pier handling in the standing review?",
+        "expected_source": "crowd_012",
         "rank": null,
         "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_056",
+        "query": "Which submission mentions ring signal handling in the standing review?",
+        "expected_source": "crowd_001",
+        "rank": 2,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions rider perch handling in the standing review?",
+        "expected_source": "crowd_019",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions catch bar handling in the standing review?",
+        "expected_source": "crowd_036",
+        "rank": null,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions precious facet handling in the standing review?",
+        "expected_source": "crowd_028",
+        "rank": null,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions water gap handling in the standing review?",
+        "expected_source": "crowd_010",
+        "rank": null,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions feather tuft handling in the standing review?",
+        "expected_source": "crowd_015",
+        "rank": null,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions sweep oar handling in the standing review?",
+        "expected_source": "crowd_016",
+        "rank": null,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions galvanic coat handling in the standing review?",
+        "expected_source": "crowd_026",
+        "rank": null,
+        "sources": [
+          "crowd_000-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_003-p00-c00",
+          "crowd_004-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
@@ -322,281 +322,281 @@
     ],
     "vector": [
       {
-        "query": "Which policy about refund requires approval by the team manager?",
-        "expected_source": "gen_046",
+        "query": "Which submission mentions wind mound handling in the standing review?",
+        "expected_source": "crowd_034",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_019-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the department director?",
-        "expected_source": "gen_010",
-        "rank": 3,
-        "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about expense requires approval by the team manager?",
-        "expected_source": "gen_006",
+        "query": "Which submission mentions winter hut handling in the standing review?",
+        "expected_source": "crowd_017",
         "rank": 2,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_022-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_019-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about training requires approval by the department director?",
-        "expected_source": "gen_074",
+        "query": "Which submission mentions sport dart handling in the standing review?",
+        "expected_source": "crowd_033",
         "rank": null,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_038-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_037-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_032-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the security officer?",
-        "expected_source": "gen_038",
-        "rank": 3,
-        "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_077",
+        "query": "Which submission mentions broken fill handling in the standing review?",
+        "expected_source": "crowd_000",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_032-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about expense requires approval by the data steward?",
-        "expected_source": "gen_060",
+        "query": "Which submission mentions undertaking handling in the standing review?",
+        "expected_source": "crowd_039",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_028-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00",
+          "crowd_038-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the department director?",
-        "expected_source": "gen_066",
+        "query": "Which submission mentions marker handling in the standing review?",
+        "expected_source": "crowd_037",
         "rank": null,
         "sources": [
-          "gen_002-p03-c00",
-          "gen_031-p03-c00",
-          "gen_079-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_021-p00-c00",
+          "crowd_032-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the finance committee?",
-        "expected_source": "gen_020",
-        "rank": 3,
-        "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_075",
-        "rank": null,
-        "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about support requires approval by the team manager?",
-        "expected_source": "gen_009",
-        "rank": 4,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the team manager?",
-        "expected_source": "gen_018",
-        "rank": null,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about training requires approval by the finance committee?",
-        "expected_source": "gen_050",
-        "rank": null,
-        "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about onboarding requires approval by the department director?",
-        "expected_source": "gen_012",
-        "rank": null,
-        "sources": [
-          "gen_079-p00-c00",
-          "gen_032-p00-c00",
-          "gen_078-p00-c00",
-          "gen_062-p00-c00",
-          "gen_002-p00-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the finance committee?",
-        "expected_source": "gen_051",
-        "rank": null,
-        "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_039",
+        "query": "Which submission mentions sub-zero handling in the standing review?",
+        "expected_source": "crowd_032",
         "rank": 5,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_032-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about retention requires approval by the team manager?",
-        "expected_source": "gen_037",
+        "query": "Which submission mentions camera hole handling in the standing review?",
+        "expected_source": "crowd_024",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_037-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about refund requires approval by the data steward?",
-        "expected_source": "gen_034",
-        "rank": 4,
-        "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about travel requires approval by the department director?",
-        "expected_source": "gen_055",
+        "query": "Which submission mentions orchard patch handling in the standing review?",
+        "expected_source": "crowd_021",
         "rank": null,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_016-p00-c00",
+          "crowd_019-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_018-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_056",
+        "query": "Which submission mentions small bird handling in the standing review?",
+        "expected_source": "crowd_038",
+        "rank": 2,
+        "sources": [
+          "crowd_017-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_023-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions storage jar handling in the standing review?",
+        "expected_source": "crowd_008",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_016-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_011-p00-c00",
+          "crowd_032-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions cargo pier handling in the standing review?",
+        "expected_source": "crowd_012",
+        "rank": null,
+        "sources": [
+          "crowd_038-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_037-p00-c00",
+          "crowd_028-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions ring signal handling in the standing review?",
+        "expected_source": "crowd_001",
+        "rank": null,
+        "sources": [
+          "crowd_038-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_033-p00-c00",
+          "crowd_032-p00-c00",
+          "crowd_017-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions rider perch handling in the standing review?",
+        "expected_source": "crowd_019",
+        "rank": null,
+        "sources": [
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_023-p00-c00",
+          "crowd_002-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions catch bar handling in the standing review?",
+        "expected_source": "crowd_036",
+        "rank": null,
+        "sources": [
+          "crowd_017-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_018-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions precious facet handling in the standing review?",
+        "expected_source": "crowd_028",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_021-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_017-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions water gap handling in the standing review?",
+        "expected_source": "crowd_010",
+        "rank": null,
+        "sources": [
+          "crowd_017-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_028-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions feather tuft handling in the standing review?",
+        "expected_source": "crowd_015",
+        "rank": null,
+        "sources": [
+          "crowd_024-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_023-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions sweep oar handling in the standing review?",
+        "expected_source": "crowd_016",
+        "rank": null,
+        "sources": [
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_021-p00-c00",
+          "crowd_023-p00-c00",
+          "crowd_032-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions galvanic coat handling in the standing review?",
+        "expected_source": "crowd_026",
+        "rank": null,
+        "sources": [
+          "crowd_022-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_038-p00-c00",
+          "crowd_021-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
@@ -604,281 +604,281 @@
     ],
     "hybrid": [
       {
-        "query": "Which policy about refund requires approval by the team manager?",
-        "expected_source": "gen_046",
+        "query": "Which submission mentions wind mound handling in the standing review?",
+        "expected_source": "crowd_034",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_019-p00-c00",
+          "crowd_016-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the department director?",
-        "expected_source": "gen_010",
+        "query": "Which submission mentions winter hut handling in the standing review?",
+        "expected_source": "crowd_017",
         "rank": 3,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_022-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about expense requires approval by the team manager?",
-        "expected_source": "gen_006",
-        "rank": 2,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about training requires approval by the department director?",
-        "expected_source": "gen_074",
+        "query": "Which submission mentions sport dart handling in the standing review?",
+        "expected_source": "crowd_033",
         "rank": null,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_016-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the security officer?",
-        "expected_source": "gen_038",
-        "rank": 3,
-        "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_077",
+        "query": "Which submission mentions broken fill handling in the standing review?",
+        "expected_source": "crowd_000",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_008-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about expense requires approval by the data steward?",
-        "expected_source": "gen_060",
+        "query": "Which submission mentions undertaking handling in the standing review?",
+        "expected_source": "crowd_039",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_023-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the department director?",
-        "expected_source": "gen_066",
+        "query": "Which submission mentions marker handling in the standing review?",
+        "expected_source": "crowd_037",
         "rank": null,
         "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_031-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_021-p00-c00",
+          "crowd_011-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the finance committee?",
-        "expected_source": "gen_020",
-        "rank": 3,
-        "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_075",
+        "query": "Which submission mentions sub-zero handling in the standing review?",
+        "expected_source": "crowd_032",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_007-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the team manager?",
-        "expected_source": "gen_009",
-        "rank": 4,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the team manager?",
-        "expected_source": "gen_018",
+        "query": "Which submission mentions camera hole handling in the standing review?",
+        "expected_source": "crowd_024",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_007-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_008-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about training requires approval by the finance committee?",
-        "expected_source": "gen_050",
+        "query": "Which submission mentions orchard patch handling in the standing review?",
+        "expected_source": "crowd_021",
         "rank": null,
         "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_016-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_019-p00-c00",
+          "crowd_018-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about onboarding requires approval by the department director?",
-        "expected_source": "gen_012",
-        "rank": 4,
-        "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the finance committee?",
-        "expected_source": "gen_051",
+        "query": "Which submission mentions small bird handling in the standing review?",
+        "expected_source": "crowd_038",
         "rank": null,
         "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_039",
+        "query": "Which submission mentions storage jar handling in the standing review?",
+        "expected_source": "crowd_008",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_011-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_016-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions cargo pier handling in the standing review?",
+        "expected_source": "crowd_012",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_014-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions ring signal handling in the standing review?",
+        "expected_source": "crowd_001",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_008-p00-c00",
+          "crowd_023-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions rider perch handling in the standing review?",
+        "expected_source": "crowd_019",
         "rank": 5,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00",
+          "crowd_019-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about retention requires approval by the team manager?",
-        "expected_source": "gen_037",
+        "query": "Which submission mentions catch bar handling in the standing review?",
+        "expected_source": "crowd_036",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_008-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_022-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about refund requires approval by the data steward?",
-        "expected_source": "gen_034",
-        "rank": 4,
-        "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about travel requires approval by the department director?",
-        "expected_source": "gen_055",
+        "query": "Which submission mentions precious facet handling in the standing review?",
+        "expected_source": "crowd_028",
         "rank": null,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_011-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_056",
+        "query": "Which submission mentions water gap handling in the standing review?",
+        "expected_source": "crowd_010",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_011-p00-c00",
+          "crowd_022-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions feather tuft handling in the standing review?",
+        "expected_source": "crowd_015",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_004-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_024-p00-c00",
+          "crowd_022-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions sweep oar handling in the standing review?",
+        "expected_source": "crowd_016",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_021-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions galvanic coat handling in the standing review?",
+        "expected_source": "crowd_026",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_012-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
@@ -886,281 +886,281 @@
     ],
     "hybrid_rerank": [
       {
-        "query": "Which policy about refund requires approval by the team manager?",
-        "expected_source": "gen_046",
+        "query": "Which submission mentions wind mound handling in the standing review?",
+        "expected_source": "crowd_034",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_019-p00-c00",
+          "crowd_016-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the department director?",
-        "expected_source": "gen_010",
+        "query": "Which submission mentions winter hut handling in the standing review?",
+        "expected_source": "crowd_017",
         "rank": 3,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_022-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about expense requires approval by the team manager?",
-        "expected_source": "gen_006",
-        "rank": 2,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about training requires approval by the department director?",
-        "expected_source": "gen_074",
+        "query": "Which submission mentions sport dart handling in the standing review?",
+        "expected_source": "crowd_033",
         "rank": null,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_016-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the security officer?",
-        "expected_source": "gen_038",
-        "rank": 3,
-        "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_077",
+        "query": "Which submission mentions broken fill handling in the standing review?",
+        "expected_source": "crowd_000",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_008-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about expense requires approval by the data steward?",
-        "expected_source": "gen_060",
+        "query": "Which submission mentions undertaking handling in the standing review?",
+        "expected_source": "crowd_039",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_023-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the department director?",
-        "expected_source": "gen_066",
+        "query": "Which submission mentions marker handling in the standing review?",
+        "expected_source": "crowd_037",
         "rank": null,
         "sources": [
-          "gen_002-p03-c00",
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_031-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_021-p00-c00",
+          "crowd_011-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about assets requires approval by the finance committee?",
-        "expected_source": "gen_020",
-        "rank": 3,
-        "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about procurement requires approval by the security officer?",
-        "expected_source": "gen_075",
+        "query": "Which submission mentions sub-zero handling in the standing review?",
+        "expected_source": "crowd_032",
         "rank": null,
         "sources": [
-          "gen_011-p03-c00",
-          "gen_035-p03-c00",
-          "gen_038-p03-c00",
-          "gen_043-p03-c00",
-          "gen_045-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_007-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about support requires approval by the team manager?",
-        "expected_source": "gen_009",
-        "rank": 4,
-        "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the team manager?",
-        "expected_source": "gen_018",
+        "query": "Which submission mentions camera hole handling in the standing review?",
+        "expected_source": "crowd_024",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_007-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_008-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about training requires approval by the finance committee?",
-        "expected_source": "gen_050",
+        "query": "Which submission mentions orchard patch handling in the standing review?",
+        "expected_source": "crowd_021",
         "rank": null,
         "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
+          "crowd_017-p00-c00",
+          "crowd_016-p00-c00",
+          "crowd_002-p00-c00",
+          "crowd_019-p00-c00",
+          "crowd_018-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about onboarding requires approval by the department director?",
-        "expected_source": "gen_012",
-        "rank": 4,
-        "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about leave requires approval by the finance committee?",
-        "expected_source": "gen_051",
+        "query": "Which submission mentions small bird handling in the standing review?",
+        "expected_source": "crowd_038",
         "rank": null,
         "sources": [
-          "gen_008-p03-c00",
-          "gen_014-p03-c00",
-          "gen_020-p03-c00",
-          "gen_023-p03-c00",
-          "gen_029-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_039",
+        "query": "Which submission mentions storage jar handling in the standing review?",
+        "expected_source": "crowd_008",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_011-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_016-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions cargo pier handling in the standing review?",
+        "expected_source": "crowd_012",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_014-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions ring signal handling in the standing review?",
+        "expected_source": "crowd_001",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_008-p00-c00",
+          "crowd_023-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions rider perch handling in the standing review?",
+        "expected_source": "crowd_019",
         "rank": 5,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_023-p00-c00",
+          "crowd_019-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about retention requires approval by the team manager?",
-        "expected_source": "gen_037",
+        "query": "Which submission mentions catch bar handling in the standing review?",
+        "expected_source": "crowd_036",
         "rank": null,
         "sources": [
-          "gen_000-p03-c00",
-          "gen_006-p03-c00",
-          "gen_007-p03-c00",
-          "gen_009-p03-c00",
-          "gen_015-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_008-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_018-p00-c00",
+          "crowd_022-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about refund requires approval by the data steward?",
-        "expected_source": "gen_034",
-        "rank": 4,
-        "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
-        ],
-        "relevance": null,
-        "groundedness": null
-      },
-      {
-        "query": "Which policy about travel requires approval by the department director?",
-        "expected_source": "gen_055",
+        "query": "Which submission mentions precious facet handling in the standing review?",
+        "expected_source": "crowd_028",
         "rank": null,
         "sources": [
-          "gen_003-p03-c00",
-          "gen_005-p03-c00",
-          "gen_010-p03-c00",
-          "gen_012-p03-c00",
-          "gen_021-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_011-p00-c00"
         ],
         "relevance": null,
         "groundedness": null
       },
       {
-        "query": "Which policy about leave requires approval by the data steward?",
-        "expected_source": "gen_056",
+        "query": "Which submission mentions water gap handling in the standing review?",
+        "expected_source": "crowd_010",
         "rank": null,
         "sources": [
-          "gen_004-p03-c00",
-          "gen_013-p03-c00",
-          "gen_033-p03-c00",
-          "gen_034-p03-c00",
-          "gen_039-p03-c00"
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_011-p00-c00",
+          "crowd_022-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions feather tuft handling in the standing review?",
+        "expected_source": "crowd_015",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_004-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_024-p00-c00",
+          "crowd_022-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions sweep oar handling in the standing review?",
+        "expected_source": "crowd_016",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_014-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_021-p00-c00"
+        ],
+        "relevance": null,
+        "groundedness": null
+      },
+      {
+        "query": "Which submission mentions galvanic coat handling in the standing review?",
+        "expected_source": "crowd_026",
+        "rank": null,
+        "sources": [
+          "crowd_002-p00-c00",
+          "crowd_001-p00-c00",
+          "crowd_017-p00-c00",
+          "crowd_022-p00-c00",
+          "crowd_012-p00-c00"
         ],
         "relevance": null,
         "groundedness": null

@@ -6,6 +6,10 @@ __pycache__/
 .pytest_cache/
 eval/report.json
 eval/golden_set_large.jsonl
+eval/golden_set_semantic.jsonl
+eval/golden_set_crowded.jsonl
 data/generated/
+data/generated_semantic/
+data/generated_crowded/
 CHUNK0_TEST_RUN.txt
 chunk0_verify.ps1

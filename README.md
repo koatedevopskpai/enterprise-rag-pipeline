@@ -117,6 +117,24 @@ LLM **reranker** added ~1 s and no recall. Ambiguous queries defeat all four.
 Synthetic near-duplicate corpus, and small sample — an illustrative validation,
 not a proof benchmark. See the blog post for the full per-question numbers.
 
+### Reranker follow-up (semantic + crowded)
+
+Built with `scripts/generate_eval_corpus.py --corpus semantic|crowded`
+(40 docs, 20 queries each). Key metrics:
+
+| Set | bm25 | vector | hybrid | hybrid_rerank |
+|---|---|---|---|---|
+| Semantic (low overlap) H@1 | 0.05 | 0.25 | 0.15 | **0.70** |
+| Semantic (low overlap) H@5 | 0.10 | 0.55 | 0.45 | **0.95** |
+| Crowded H@5 | 0.10 | 0.15 | 0.10 | 0.10 |
+| Crowded H@1 | 0.05 | 0.00 | 0.00 | 0.00 |
+
+The **reranker wins decisively on semantic paraphrases** (H@1 0.70 vs 0.25 for
+vector) — the answer is in the pool but mis-ranked, which is the reranker's
+purpose-built case. On **crowded near-duplicates** it can't help: the answer
+leaves the top-20 candidate window for every mode. Full tables in the blog
+(series post 3).
+
 **Finding:** on our corpora the modes tie. `text-embedding-3-large` is strong
 enough that dense retrieval already recovers the needle — even random
 identifiers in near-duplicate documents. Hybrid is a safe default (it never
