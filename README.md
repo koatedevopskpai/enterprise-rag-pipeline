@@ -154,3 +154,10 @@ scale-to-zero). See `docs/deployment.md`.
 ## License
 
 MIT (see LICENSE).
+
+## Fresh candidate quality gate (R01 preparation)
+
+The new fresh-quality runner and gate bind evaluated application outputs to
+candidate provenance. Azure execution is still pending the resource decision.
+This is prepared code, not a completed live gate. See [R01](docs/R01.md).
+Historical saved reports do not satisfy this path.
