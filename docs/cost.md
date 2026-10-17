@@ -1,5 +1,8 @@
 # Cost
 
+Historical illustrative estimates; not revalidated prices or a guaranteed cap.
+Do not run cloud/model commands under the current GBP 0 portfolio budget.
+
 Approximate, using `gpt-4o-mini`-class pricing and `text-embedding-3-large`.
 
 | Component | Usage | Approx cost |
@@ -10,8 +13,9 @@ Approximate, using `gpt-4o-mini`-class pricing and `text-embedding-3-large`.
 | Azure AI Search | Free tier | $0 |
 | Evaluation | 5 golden questions x2 evaluators | < $0.10 |
 
-A full local run costs well under $1. The Search service is on the free tier, so
-the only variable cost is token usage.
+The table assumes a small example and a particular service configuration.
+A local client can still call billable cloud services. Actual charges depend on
+the deployed resources, requests, region and pricing at execution time.
 
 ## Tags (FinOps)
 

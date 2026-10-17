@@ -1,6 +1,9 @@
 # We built three retrieval modes and they all tied. Here's the harness that proved it.
 
-*Draft blog post — the negative result is the point.*
+*Archived draft: the historical tables below are not corroborated by the current
+committed comparison report. Do not reuse these headline values in applications
+or publication until the matching per-run artifacts are available. See the README
+for the numbers currently supported by eval/comparison.json. No new run was made.*
 
 Every RAG tutorial tells you to "use hybrid search" and "add a reranker." Few
 show the measurement that justifies either. We built a pluggable retrieval layer
@@ -24,7 +27,9 @@ Two things make a retrieval benchmark trustworthy:
 
 1. **A deterministic metric.** We measure **hit-rate@5** (was the expected
    source in the top 5?) and **MRR** (mean reciprocal rank of the first correct
-   hit). No LLM-as-judge noise, no API calls — so it's fast, free, and stable.
+   hit). The metric calculation needs no judge. Obtaining retrieval results still
+   uses Azure Search and embeddings; the rerank mode calls a model. Deterministic
+   scoring does not make the full experiment offline or free.
 2. **A hard query set.** Easy questions saturate and tell you nothing. So we
    generated a synthetic corpus: 80 near-duplicate policy documents, each with a
    unique reference code (`REF-9K2MNP`) and limit. Queries ask for exact codes.
@@ -47,15 +52,15 @@ We expected vector to fall over on random tokens. It didn't.
 text, so the only signal distinguishing them — the code — was also the dominant
 signal in the embedding differences. Dense retrieval found the needle.
 
-And hybrid can't *lose* to vector: it includes vector, plus a keyword leg. When
-vector already recalls everything, hybrid has nothing to add. The reranker
-reorders candidates but recall was already 100% at rank 1 — **MRR was
-saturated**, so reranking couldn't help either.
+Hybrid can lose recall at a fixed top-k because fusion changes which candidates
+survive. The early ties in this draft do not establish a guarantee. Later
+semantic and crowded-query comparisons in the README show why ranking quality
+and candidate-pool recall need to be assessed separately.
 
 ## What this actually means
 
-- **Default to hybrid.** It never recalls less than vector and costs the same on
-  Azure AI Search. It's insurance, not a silver bullet.
+- **Compare hybrid with vector on the target query set.** Fusion can help or
+  hurt at a fixed cutoff. Measure quality, latency and actual service usage.
 - **Rerank only when ranking is the bottleneck.** If your hit-rate is high but
   your *top-1* accuracy (or answer quality) is not, a reranker earns its
   latency. If recall is already solved, it's cost with no benefit.

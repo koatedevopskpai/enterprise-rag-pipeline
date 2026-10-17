@@ -1,8 +1,8 @@
 # enterprise-rag-pipeline
 
-Production-style Retrieval-Augmented Generation over enterprise documents:
-hybrid retrieval (keyword + vector + RRF), grounded answers with citations, and
-an automated groundedness/relevance evaluation gate. Built on Microsoft Foundry
+Reference implementation of Retrieval-Augmented Generation over enterprise documents:
+hybrid retrieval (keyword + vector + RRF), citation-prompted answers, and
+an offline threshold check of a saved evaluation report. Built on Microsoft Foundry
 (Azure OpenAI + Azure AI Search).
 
 ## Status
@@ -75,16 +75,22 @@ Compare all three on the golden set:
 ```powershell
 .\.venv\Scripts\python.exe eval\compare_modes.py
 ```
-Reports retrieval **hit-rate** and **MRR** (deterministic, no LLM calls) plus
-relevance and groundedness. Set `SKIP_LLM_EVAL=1` for a fast, free retrieval-only
-run, and `GOLDEN_LIMIT=N` to cap the number of questions. Results are written to
+Reports retrieval **hit-rate** and **MRR** (deterministic metric calculations) plus
+relevance and groundedness. Retrieval still calls Azure Search and embeddings;
+`hybrid_rerank` also calls a model. `SKIP_LLM_EVAL=1` skips answer-quality judges,
+not all billable services. This is not an offline or guaranteed-free command. Use
+`GOLDEN_LIMIT=N` to cap the number of questions. Results are written to
 `eval/comparison.json`.
 
 ## Evaluation results
 
 `eval/evaluate_quality.py` scores relevance, groundedness, coherence, and
 fluency over the golden set (`eval/quality_report.{json,md}`).
-`eval/gate.py` enforces thresholds for CI.
+`eval/gate.py` checks thresholds against the supplied report. The current
+evaluation workflow checks `eval/quality_report.json` if present and skips if it
+is absent. It does not regenerate candidate application answers or prove a fresh
+quality-gated release. The table below is a previously committed 16-question
+report, not a new run from this documentation change.
 
 | Metric | Mean (hybrid) | Threshold |
 |---|---|---|
@@ -96,64 +102,46 @@ fluency over the golden set (`eval/quality_report.{json,md}`).
 Live deployment latency (Container Apps + Application Insights) and the KQL
 queries used are in `docs/observability.md`.
 
-### Retrieval mode comparison (measured)
+### Retrieval comparison: committed artifact
 
-Hit@5 / MRR over the final 5 candidates (rerank pool = top 20 parents), 80
-synthetic docs across four 20-query sets:
+The currently committed [comparison report](eval/comparison.json) contains 20
+queries per strategy. Its expected source IDs use the `crowd_` prefix. It records
+these results (rounded here; full precision remains in JSON):
 
-| Query set | bm25 | vector | hybrid | hybrid_rerank |
-|---|---|---|---|---|
-| Bare reference codes | 1.00 / 1.00 | 0.95 / 0.95 | 0.90 / 0.90 | 0.90 / 0.90 |
-| Code + context | 1.00 / 1.00 | 0.95 / 0.95 | 0.95 / 0.95 | 0.90 / 0.90 |
-| Paraphrase (limit N) | 1.00 / 1.00 | 0.90 / 0.70 | 0.95 / 0.93 | 0.90 / 0.90 |
-| Ambiguous topic | 0.40 / 0.10 | 0.35 / 0.11 | 0.40 / 0.12 | 0.40 / 0.12 |
+| Strategy | Hit@1 | Hit@5 | MRR | nDCG@5 | Questions |
+|---|---|---|---|---|---|
+| bm25 | 0.05 | 0.10 | 0.0750 | 0.0815 | 20 |
+| vector | 0.00 | 0.15 | 0.0600 | 0.0824 | 20 |
+| hybrid | 0.00 | 0.10 | 0.0267 | 0.0443 | 20 |
+| hybrid_rerank | 0.00 | 0.10 | 0.0267 | 0.0443 | 20 |
 
-Per-query latency (p50, dev box): **bm25 ~0.6 s, vector ~1.3 s, hybrid ~1.4 s,
-hybrid_rerank ~2.4 s.**
+This artifact reports null relevance/groundedness fields, so it is retrieval
+ranking evidence only. It does not establish generated-answer quality. No new
+retrieval, model or cloud run was made for this documentation correction.
 
-Interpretation: lexical/identifier queries are a **BM25** win; paraphrase-style
-queries are a **hybrid** win over vector (MRR 0.93 vs 0.70) for ~80 ms extra; the
-LLM **reranker** added ~1 s and no recall. Ambiguous queries defeat all four.
-Synthetic near-duplicate corpus, and small sample — an illustrative validation,
-not a proof benchmark. See the blog post for the full per-question numbers.
+Earlier README tables reported different synthetic query sets, including an MRR
+comparison of 0.93 versus 0.70. Those figures are not corroborated by this saved
+artifact, and corresponding versioned per-run reports were not established in
+this review. They are removed from the headline evidence pending provenance or a
+controlled rerun; the saved report must not be relabelled as that earlier run.
+The historical blog draft also needs its own evidence before publication.
 
-### Reranker follow-up (semantic + crowded)
-
-Built with `scripts/generate_eval_corpus.py --corpus semantic|crowded`
-(40 docs, 20 queries each). Key metrics:
-
-| Set | bm25 | vector | hybrid | hybrid_rerank |
-|---|---|---|---|---|
-| Semantic (low overlap) H@1 | 0.05 | 0.25 | 0.15 | **0.70** |
-| Semantic (low overlap) H@5 | 0.10 | 0.55 | 0.45 | **0.95** |
-| Crowded H@5 | 0.10 | 0.15 | 0.10 | 0.10 |
-| Crowded H@1 | 0.05 | 0.00 | 0.00 | 0.00 |
-
-The **reranker wins decisively on semantic paraphrases** (H@1 0.70 vs 0.25 for
-vector) — the answer is in the pool but mis-ranked, which is the reranker's
-purpose-built case. On **crowded near-duplicates** it can't help: the answer
-leaves the top-20 candidate window for every mode. Full tables in the blog
-(series post 3).
-
-**Finding:** on our corpora the modes tie. `text-embedding-3-large` is strong
-enough that dense retrieval already recovers the needle — even random
-identifiers in near-duplicate documents. Hybrid is a safe default (it never
-recalls less than vector), and the LLM reranker changes *ordering* but not
-*recall*, because MRR was already saturated. Reranking only pays off when
-candidate ranking, not recall, is the bottleneck. The harness
-(`eval/compare_modes.py`, `scripts/generate_eval_corpus.py`) is included so the
-experiment can be repeated on your data.
+At a fixed top-k, fusion can displace a relevant vector result. Hybrid is not
+guaranteed to retain vector recall. Reranking cannot recover a document excluded
+from its candidate pool. Compare strategies on the same versioned query set,
+including failures and latency, before selecting a default for another workload.
 
 ## Cost
 
 See `docs/cost.md`. Uses gpt-4.1-mini + text-embedding-3-large and an Azure AI
-Search Free tier; the whole project runs for a few dollars. Run
+Search Free tier; the figures are historical estimates, not a current spend ceiling. Run
 `infra/teardown.ps1` when finished.
 
 ## Deploy
 
 A FastAPI service (`app/main.py`) wraps the pipeline and emits OpenTelemetry
-traces to Application Insights. Build and deploy with `azd up` (Container Apps,
+traces to Application Insights when configured. Configuration is not proof of a
+current deployment or achieved service level. Build and deploy with `azd up` (Container Apps,
 scale-to-zero). See `docs/deployment.md`.
 
 ## Limitations
