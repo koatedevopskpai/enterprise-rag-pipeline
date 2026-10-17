@@ -1,8 +1,8 @@
 # enterprise-rag-pipeline
 
-Production-style Retrieval-Augmented Generation over enterprise documents:
-hybrid retrieval (keyword + vector + RRF), grounded answers with citations, and
-an automated groundedness/relevance evaluation gate. Built on Microsoft Foundry
+Reference implementation of Retrieval-Augmented Generation over enterprise documents:
+hybrid retrieval (keyword + vector + RRF), citation-prompted answers, and
+an offline threshold check of a saved evaluation report. Built on Microsoft Foundry
 (Azure OpenAI + Azure AI Search).
 
 ## Status
@@ -75,16 +75,22 @@ Compare all three on the golden set:
 ```powershell
 .\.venv\Scripts\python.exe eval\compare_modes.py
 ```
-Reports retrieval **hit-rate** and **MRR** (deterministic, no LLM calls) plus
-relevance and groundedness. Set `SKIP_LLM_EVAL=1` for a fast, free retrieval-only
-run, and `GOLDEN_LIMIT=N` to cap the number of questions. Results are written to
+Reports retrieval **hit-rate** and **MRR** (deterministic metric calculations) plus
+relevance and groundedness. Retrieval still calls Azure Search and embeddings;
+`hybrid_rerank` also calls a model. `SKIP_LLM_EVAL=1` skips answer-quality judges,
+not all billable services. This is not an offline or guaranteed-free command. Use
+`GOLDEN_LIMIT=N` to cap the number of questions. Results are written to
 `eval/comparison.json`.
 
 ## Evaluation results
 
 `eval/evaluate_quality.py` scores relevance, groundedness, coherence, and
 fluency over the golden set (`eval/quality_report.{json,md}`).
-`eval/gate.py` enforces thresholds for CI.
+`eval/gate.py` checks thresholds against the supplied report. The current
+evaluation workflow checks `eval/quality_report.json` if present and skips if it
+is absent. It does not regenerate candidate application answers or prove a fresh
+quality-gated release. The table below is a previously committed 16-question
+report, not a new run from this documentation change.
 
 | Metric | Mean (hybrid) | Threshold |
 |---|---|---|
@@ -135,25 +141,24 @@ purpose-built case. On **crowded near-duplicates** it can't help: the answer
 leaves the top-20 candidate window for every mode. Full tables in the blog
 (series post 3).
 
-**Finding:** on our corpora the modes tie. `text-embedding-3-large` is strong
-enough that dense retrieval already recovers the needle — even random
-identifiers in near-duplicate documents. Hybrid is a safe default (it never
-recalls less than vector), and the LLM reranker changes *ordering* but not
-*recall*, because MRR was already saturated. Reranking only pays off when
-candidate ranking, not recall, is the bottleneck. The harness
-(`eval/compare_modes.py`, `scripts/generate_eval_corpus.py`) is included so the
-experiment can be repeated on your data.
+**Interpretation boundary:** the tables describe different small synthetic
+query sets and do not establish one universally best strategy. At a fixed top-k,
+fusion can displace a relevant vector result; hybrid is not guaranteed to retain
+vector recall. Reranking can improve ordering when the relevant document is in
+the candidate pool, but cannot recover a document excluded from that pool. These
+published results have not been rerun for this wording correction.
 
 ## Cost
 
 See `docs/cost.md`. Uses gpt-4.1-mini + text-embedding-3-large and an Azure AI
-Search Free tier; the whole project runs for a few dollars. Run
+Search Free tier; the figures are historical estimates, not a current spend ceiling. Run
 `infra/teardown.ps1` when finished.
 
 ## Deploy
 
 A FastAPI service (`app/main.py`) wraps the pipeline and emits OpenTelemetry
-traces to Application Insights. Build and deploy with `azd up` (Container Apps,
+traces to Application Insights when configured. Configuration is not proof of a
+current deployment or achieved service level. Build and deploy with `azd up` (Container Apps,
 scale-to-zero). See `docs/deployment.md`.
 
 ## Limitations
