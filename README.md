@@ -102,51 +102,34 @@ report, not a new run from this documentation change.
 Live deployment latency (Container Apps + Application Insights) and the KQL
 queries used are in `docs/observability.md`.
 
-### Retrieval mode comparison (measured)
+### Retrieval comparison: committed artifact
 
-Hit@5 / MRR over the final 5 candidates (rerank pool = top 20 parents), 80
-synthetic docs across four 20-query sets:
+The currently committed [comparison report](eval/comparison.json) contains 20
+queries per strategy. Its expected source IDs use the `crowd_` prefix. It records
+these results (rounded here; full precision remains in JSON):
 
-| Query set | bm25 | vector | hybrid | hybrid_rerank |
-|---|---|---|---|---|
-| Bare reference codes | 1.00 / 1.00 | 0.95 / 0.95 | 0.90 / 0.90 | 0.90 / 0.90 |
-| Code + context | 1.00 / 1.00 | 0.95 / 0.95 | 0.95 / 0.95 | 0.90 / 0.90 |
-| Paraphrase (limit N) | 1.00 / 1.00 | 0.90 / 0.70 | 0.95 / 0.93 | 0.90 / 0.90 |
-| Ambiguous topic | 0.40 / 0.10 | 0.35 / 0.11 | 0.40 / 0.12 | 0.40 / 0.12 |
+| Strategy | Hit@1 | Hit@5 | MRR | nDCG@5 | Questions |
+|---|---|---|---|---|---|
+| bm25 | 0.05 | 0.10 | 0.0750 | 0.0815 | 20 |
+| vector | 0.00 | 0.15 | 0.0600 | 0.0824 | 20 |
+| hybrid | 0.00 | 0.10 | 0.0267 | 0.0443 | 20 |
+| hybrid_rerank | 0.00 | 0.10 | 0.0267 | 0.0443 | 20 |
 
-Per-query latency (p50, dev box): **bm25 ~0.6 s, vector ~1.3 s, hybrid ~1.4 s,
-hybrid_rerank ~2.4 s.**
+This artifact reports null relevance/groundedness fields, so it is retrieval
+ranking evidence only. It does not establish generated-answer quality. No new
+retrieval, model or cloud run was made for this documentation correction.
 
-Interpretation: lexical/identifier queries are a **BM25** win; paraphrase-style
-queries are a **hybrid** win over vector (MRR 0.93 vs 0.70) for ~80 ms extra; the
-LLM **reranker** added ~1 s and no recall. Ambiguous queries defeat all four.
-Synthetic near-duplicate corpus, and small sample — an illustrative validation,
-not a proof benchmark. See the blog post for the full per-question numbers.
+Earlier README tables reported different synthetic query sets, including an MRR
+comparison of 0.93 versus 0.70. Those figures are not corroborated by this saved
+artifact, and corresponding versioned per-run reports were not established in
+this review. They are removed from the headline evidence pending provenance or a
+controlled rerun; the saved report must not be relabelled as that earlier run.
+The historical blog draft also needs its own evidence before publication.
 
-### Reranker follow-up (semantic + crowded)
-
-Built with `scripts/generate_eval_corpus.py --corpus semantic|crowded`
-(40 docs, 20 queries each). Key metrics:
-
-| Set | bm25 | vector | hybrid | hybrid_rerank |
-|---|---|---|---|---|
-| Semantic (low overlap) H@1 | 0.05 | 0.25 | 0.15 | **0.70** |
-| Semantic (low overlap) H@5 | 0.10 | 0.55 | 0.45 | **0.95** |
-| Crowded H@5 | 0.10 | 0.15 | 0.10 | 0.10 |
-| Crowded H@1 | 0.05 | 0.00 | 0.00 | 0.00 |
-
-The **reranker wins decisively on semantic paraphrases** (H@1 0.70 vs 0.25 for
-vector) — the answer is in the pool but mis-ranked, which is the reranker's
-purpose-built case. On **crowded near-duplicates** it can't help: the answer
-leaves the top-20 candidate window for every mode. Full tables in the blog
-(series post 3).
-
-**Interpretation boundary:** the tables describe different small synthetic
-query sets and do not establish one universally best strategy. At a fixed top-k,
-fusion can displace a relevant vector result; hybrid is not guaranteed to retain
-vector recall. Reranking can improve ordering when the relevant document is in
-the candidate pool, but cannot recover a document excluded from that pool. These
-published results have not been rerun for this wording correction.
+At a fixed top-k, fusion can displace a relevant vector result. Hybrid is not
+guaranteed to retain vector recall. Reranking cannot recover a document excluded
+from its candidate pool. Compare strategies on the same versioned query set,
+including failures and latency, before selecting a default for another workload.
 
 ## Cost
 

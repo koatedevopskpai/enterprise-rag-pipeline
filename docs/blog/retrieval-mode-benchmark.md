@@ -1,7 +1,9 @@
 # We built three retrieval modes and they all tied. Here's the harness that proved it.
 
-*Historical draft. Later README tables cover additional query sets. No new
-benchmark was run for this correction; these results are not universal.*
+*Archived draft: the historical tables below are not corroborated by the current
+committed comparison report. Do not reuse these headline values in applications
+or publication until the matching per-run artifacts are available. See the README
+for the numbers currently supported by eval/comparison.json. No new run was made.*
 
 Every RAG tutorial tells you to "use hybrid search" and "add a reranker." Few
 show the measurement that justifies either. We built a pluggable retrieval layer
