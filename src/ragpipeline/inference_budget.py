@@ -61,6 +61,15 @@ class InferenceBudget:
             return response
         except Exception as exc:
             record.update(status='failed', error_type=type(exc).__name__)
+            status = getattr(exc, 'status_code', None)
+            if isinstance(status, int):
+                record['http_status'] = status
+            body = getattr(exc, 'body', None)
+            if isinstance(body, dict):
+                error = body.get('error', body)
+                code = error.get('code') if isinstance(error, dict) else None
+                if isinstance(code, str) and code.isalnum():
+                    record['provider_error_code'] = code[:80]
             raise
         finally:
             self.save()
