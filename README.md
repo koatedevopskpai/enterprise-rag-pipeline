@@ -155,9 +155,12 @@ scale-to-zero). See `docs/deployment.md`.
 
 MIT (see LICENSE).
 
-## Fresh candidate quality gate (R01 preparation)
+## Fresh candidate quality gate (R01)
 
-The new fresh-quality runner and gate bind evaluated application outputs to
-candidate provenance. Azure execution is still pending the resource decision.
-This is prepared code, not a completed live gate. See [R01](docs/R01.md).
-Historical saved reports do not satisfy this path.
+The fresh runner binds evaluated application answers to candidate provenance.
+A three-question Azure Search Free smoke baseline passed; a controlled unsupported
+answer failed. Revision/configuration/run mismatch, stale evidence and a missing
+score also blocked. This uses a custom Azure OpenAI judge with provisional floors,
+not a broad benchmark. Temporary resources were deleted and absence verified.
+See [R01 method, results and limits](docs/R01.md). Historical saved reports do not
+satisfy a new release gate. Independent review and remote CI remain pending.
