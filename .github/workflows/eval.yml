@@ -1,24 +1,54 @@
 name: eval-gate
-
 on:
-  workflow_dispatch:
   pull_request:
-    paths:
-      - "src/**"
-      - "eval/**"
-
+    paths: ["src/**", "eval/**", "tests/**", ".github/workflows/eval.yml"]
+  workflow_dispatch:
+    inputs:
+      run_live:
+        description: "Paid Azure smoke check; configure resources and budget first"
+        type: boolean
+        default: false
+      index_revision:
+        description: "Freshly ingested Azure index identity"
+        type: string
+        required: false
+permissions:
+  contents: read
 jobs:
-  gate:
+  offline-contract:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Evaluation gate (offline, against committed baseline)
-        run: |
-          if [ -f eval/quality_report.json ]; then
-            python eval/gate.py --report eval/quality_report.json
-          else
-            echo "No committed quality report; skipping gate."
-          fi
+      - run: python -m pip install -r requirements-offline.lock
+      - run: python -m pytest -p offline_guard tests -q
+  live-candidate:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_live }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -e ".[dev]"
+      - name: Generate and evaluate candidate application answers
+        env:
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          EVAL_DEPLOYMENT_NAME: ${{ vars.EVAL_DEPLOYMENT_NAME }}
+          MODEL_DEPLOYMENT_NAME: ${{ vars.MODEL_DEPLOYMENT_NAME }}
+          EMBEDDING_DEPLOYMENT_NAME: ${{ vars.EMBEDDING_DEPLOYMENT_NAME }}
+          SEARCH_ENDPOINT: ${{ secrets.SEARCH_ENDPOINT }}
+          SEARCH_KEY: ${{ secrets.SEARCH_KEY }}
+          SEARCH_INDEX_NAME: ${{ vars.SEARCH_INDEX_NAME }}
+          INDEX_REVISION: ${{ inputs.index_revision }}
+        run: python eval/fresh_quality.py --output-dir artifacts/candidate --index-revision "$INDEX_REVISION"
+      - name: Gate fresh evidence, never the committed baseline
+        run: python eval/fresh_gate.py --report artifacts/candidate/report.json --expected artifacts/candidate/expected.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: candidate-quality-${{ github.sha }}-${{ github.run_id }}
+          path: artifacts/candidate/

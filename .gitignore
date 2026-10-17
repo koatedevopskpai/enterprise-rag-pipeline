@@ -13,3 +13,6 @@ data/generated_semantic/
 data/generated_crowded/
 CHUNK0_TEST_RUN.txt
 chunk0_verify.ps1
+
+# Generated run output, uploaded by CI
+artifacts/

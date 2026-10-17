@@ -1,5 +1,6 @@
 from ragpipeline.config import MODEL_DEPLOYMENT_NAME
 from ragpipeline.embeddings import get_openai_client
+from ragpipeline.inference_budget import run_inference
 
 SYSTEM_PROMPT = (
     "Answer the user's question using ONLY the provided context. "
@@ -23,7 +24,7 @@ def build_context(retrieved_docs):
 def synthesize_answer(query, retrieved_docs):
     context = build_context(retrieved_docs)
     client = get_openai_client()
-    response = client.chat.completions.create(
+    response = run_inference('generation', client.chat.completions.create,
         model=MODEL_DEPLOYMENT_NAME,
         temperature=0,
         messages=[
