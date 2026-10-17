@@ -62,22 +62,28 @@ def execute(cases, configuration, expected, answer_fn, judges, execution_mode='o
 
 
 def azure_adapters():
-    from azure.ai.evaluation import RelevanceEvaluator, GroundednessEvaluator, CoherenceEvaluator, FluencyEvaluator
     from ragpipeline.pipeline import answer
-    config = {'azure_endpoint': os.environ['AZURE_OPENAI_ENDPOINT'],
-              'api_key': os.environ['AZURE_OPENAI_API_KEY'],
-              'azure_deployment': os.environ['EVAL_DEPLOYMENT_NAME']}
-    judges = {name: factory(config) for name, factory in zip(METRICS,
-              [RelevanceEvaluator, GroundednessEvaluator, CoherenceEvaluator, FluencyEvaluator])}
-    def wrap(name, judge):
-        def score(query, response, context):
-            if name == 'groundedness':
-                return judge(query=query, response=response, context=context)
-            if name == 'fluency':
-                return judge(response=response)
-            return judge(query=query, response=response)
-        return score
-    return answer, {name: wrap(name, judge) for name, judge in judges.items()}
+    from ragpipeline.auth import openai_client
+    from ragpipeline.inference_budget import run_inference
+    client = openai_client()
+    cache = {}
+    def evaluate_all(query, response, context):
+        identity = (query, response, context)
+        if identity not in cache:
+            result = run_inference('judge', client.chat.completions.create,
+                model=os.environ['EVAL_DEPLOYMENT_NAME'], temperature=0,
+                response_format={'type': 'json_object'},
+                messages=[
+                    {'role': 'system', 'content': 'Score the generated answer using only the question and supplied context. Return JSON with integer scores 1-5 for relevance, groundedness, coherence and fluency. 5 is best. Unsupported facts, changed limits or contradictions must lower groundedness. Do not reward fluent invented statements. Return only the four scores.'},
+                    {'role': 'user', 'content': json.dumps({'question': query, 'generated_answer': response, 'context': context})},
+                ])
+            if result.choices[0].finish_reason != 'stop':
+                raise ValueError('incomplete judge output')
+            cache[identity] = json.loads(result.choices[0].message.content)
+        return cache[identity]
+    def wrap(name):
+        return lambda query, response, context: {name: evaluate_all(query,response,context).get(name)}
+    return answer, {name: wrap(name) for name in METRICS}
 
 
 def main():
@@ -105,6 +111,7 @@ def main():
         cases = [json.loads(line) for line in (ROOT/'eval/golden_set.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()][:args.max_cases]
         configuration = {key: os.getenv(key) for key in ['EVAL_DEPLOYMENT_NAME', 'MODEL_DEPLOYMENT_NAME', 'EMBEDDING_DEPLOYMENT_NAME', 'EMBEDDING_DIMENSIONS', 'SEARCH_INDEX_NAME', 'RETRIEVE_TOP_K', 'CHUNK_SIZE', 'CHUNK_OVERLAP', 'AZURE_OPENAI_API_VERSION']}
         configuration.update(mode='hybrid', index_revision=args.index_revision,
+                             evaluator_identity='azure-openai-custom-four-score-v1', output_token_limit=512,
                              endpoint_hashes={key: digest(os.environ[key].encode()) for key in ['SEARCH_ENDPOINT', 'AZURE_OPENAI_ENDPOINT']},
                              fault_injected=args.fault_inject_unsupported_answer)
         expected = expectation(cases, configuration, str(uuid.uuid4()))
@@ -118,7 +125,12 @@ def main():
                 result = original(query, mode=mode)
                 return {**result, 'answer': 'Every item is refundable without exception and all limits are unlimited.'}
             answer_fn = faulty
-        report = execute(cases, configuration, expected, answer_fn, judges, execution_mode='live_azure_application')
+        from contextlib import nullcontext
+        from ragpipeline.inference_budget import InferenceBudget, budget_context, current_budget
+        existing = current_budget()
+        guard = nullcontext() if existing is not None else budget_context(InferenceBudget(output/'usage.json'))
+        with guard:
+            report = execute(cases, configuration, expected, answer_fn, judges, execution_mode='live_azure_application')
         failures = validate(report, expected)
         report['gate_failures'] = failures
     except Exception as exc:
