@@ -3,19 +3,22 @@ from contextlib import contextmanager
 from contextvars import ContextVar
 import hashlib
 import json
+import time
 from pathlib import Path
 
 _active = ContextVar('inference_budget', default=None)
 
 
 class InferenceBudget:
-    def __init__(self, ledger, max_calls=30, reservation_limit_usd=2.0):
+    def __init__(self, ledger, max_calls=30, reservation_limit_usd=2.0, min_chat_spacing_seconds=0):
         self.ledger = Path(ledger)
         if self.ledger.exists():
             raise ValueError('choose a new usage ledger; previous calls must not be overwritten')
         self.max_calls = max_calls
         self.limit = reservation_limit_usd
         self.records = []
+        self.spacing = min_chat_spacing_seconds
+        self._last_chat = None
 
     def save(self):
         self.ledger.parent.mkdir(parents=True, exist_ok=True)
@@ -42,6 +45,10 @@ class InferenceBudget:
         self.records.append(record)
         self.save()
         try:
+            if kind != 'embedding':
+                if self._last_chat is not None:
+                    time.sleep(max(0, self.spacing-(time.monotonic()-self._last_chat)))
+                self._last_chat = time.monotonic()
             response = fn(**kwargs)
             usage = response.usage
             prompt = usage.prompt_tokens
