@@ -1,5 +1,9 @@
 # enterprise-rag-pipeline
 
+> **Reviewing this?** Start at [EVIDENCE.md](EVIDENCE.md) — a short index of what
+> the project is, the strongest measured result, how to reproduce it, and what it
+> does not establish.
+
 Reference implementation of Retrieval-Augmented Generation over enterprise documents:
 hybrid retrieval (keyword + vector + RRF), citation-prompted answers, and
 an offline threshold check of a saved evaluation report. Built on Microsoft Foundry
